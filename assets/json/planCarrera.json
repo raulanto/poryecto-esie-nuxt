@@ -1,0 +1,46 @@
+[
+  {
+    "value": 1,
+    "plan": "B ISIC-2010-224",
+    "carrera": 1,
+    "periodo": 1
+  },
+  {
+    "value": 2,
+    "plan": "L ISIC-1993-296",
+    "carrera": 1,
+    "periodo": 1
+  },
+  {
+    "value": 3,
+    "plan": "O ISIC-2004-296",
+    "carrera": 1,
+    "periodo": 1
+  },
+  {
+    "value": 4,
+    "plan": "G GAST-2010-215",
+    "carrera": 2,
+    "periodo": 1
+  },
+  {
+    "value": 5,
+    "plan": "G GAST-2010-215",
+    "carrera": 2,
+    "periodo": 1
+  },
+  {
+    "value": 6,
+    "plan": "A IADM-2010-213",
+    "carrera": 3,
+    "periodo": 1
+  },
+  {
+    "value": 7,
+    "plan": "W IADM-2010-213",
+    "carrera": 4,
+    "periodo": 1
+  }
+
+
+]
