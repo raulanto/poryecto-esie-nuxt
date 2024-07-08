@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {onMounted, onUnmounted, ref} from 'vue'
+import {defineProps, onMounted, onUnmounted, ref} from 'vue'
 import {useFlowbite} from '~/composables/useFlowbite';
 
 import Graph from '@/components/icons/Graph.vue'
@@ -8,7 +8,14 @@ import ReusableDropdown from '@/components/global/DropDown.vue'
 
 const isSidebarVisible = ref(false)
 
-const dropdownItems1 = [{label: 'Poblacion por rango', href: '/proyect/Dasborad'}]
+const props = defineProps({
+  nav: {
+    type: Array,
+    required: true
+  },
+});
+
+
 
 const toggleSidebar = () => {
 	isSidebarVisible.value = !isSidebarVisible.value
@@ -42,7 +49,9 @@ onMounted(() => {
 onUnmounted(() => {
 	document.removeEventListener('click', handleClickOutside)
 	window.removeEventListener('resize', handleResize)
-	initFlowbite()
+  useFlowbite(() => {
+    initFlowbite();
+  })
 })
 </script>
 
@@ -95,13 +104,13 @@ onUnmounted(() => {
 
 					<ul aria-labelledby="dropdown" class="py-1 text-gray-700 dark:text-gray-300">
 						<li>
-							<router-link to="/">
-								<a
+							<NuxtLinkk to="/">
+								<div
 									class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
 									href="#"
-								>Sign out</a
+								>Sign out</div
 								>
-							</router-link>
+							</NuxtLinkk>
 						</li>
 					</ul>
 				</div>
@@ -121,7 +130,7 @@ onUnmounted(() => {
 				<div>
 					<ReusableDropdown
 						:icon="Graph"
-						:items="dropdownItems1"
+						:items="props.nav"
 						buttonLabel="Poblacion"
 						dropdownId="1"
 					/>
@@ -129,6 +138,7 @@ onUnmounted(() => {
 			</div>
 		</div>
 	</transition>
+
 </template>
 
 <style scoped>
