@@ -8,9 +8,7 @@ export default defineNuxtConfig({
         enabled: true,
       },
     },
-    modules: [
-        "@nuxtjs/tailwindcss",
-    ],
+    modules: ["@nuxtjs/tailwindcss", '@vueuse/nuxt', ],
     css: ['assets/css/main.css'],
     postcss: {
         plugins: {

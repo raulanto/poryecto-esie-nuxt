@@ -1,20 +1,14 @@
-<template>
-	<div>
-		<NuxtLayout name="home">
-			<NuxtPage/>
-		</NuxtLayout>
-	</div>
-</template>
 <script lang="ts" setup>
-import { onMounted } from 'vue'
+import { onMounted } from 'vue';
 import { useFlowbite } from '~/composables/useFlowbite';
+
 
 // initialize components based on data attribute selectors
 onMounted(() => {
 	useFlowbite(() => {
 		initFlowbite();
-	})
-})
+	});
+});
 
 useHead({
 	meta: [
@@ -28,10 +22,10 @@ useHead({
 	htmlAttrs: {
 		lang: 'en'
 	}
-})
+});
 
-const title = 'EsieGraph'
-const description = 'sistema de estadisticas Escolar'
+const title = 'EsieGraph';
+const description = 'sistema de estadisticas Escolar';
 
 useSeoMeta({
 	title,
@@ -41,7 +35,17 @@ useSeoMeta({
 	// ogImage: 'https://dashboard-template.nuxt.dev/social-card.png',
 	// twitterImage: 'https://dashboard-template.nuxt.dev/social-card.png',
 	// twitterCard: 'summary_large_image'
-})
+});
 
-
+definePageMeta({
+	layout: 'home'
+});
 </script>
+
+<template>
+	<div>
+		<NuxtLayout name="home">
+			<NuxtPage/>
+		</NuxtLayout>
+	</div>
+</template>
