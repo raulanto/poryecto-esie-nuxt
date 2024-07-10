@@ -3,17 +3,22 @@
 // import type DatosLecturaForm from '@/types/formUsuarioLogin';
 import Login from "~/components/forms/Login.vue";
 
-
+definePageMeta({
+	layout: 'customlogin'
+});
 
 
 </script>
 
 <template>
-	<section
-		class="bg-center bg-cover fondo"
-	>
-		<Login/>
-	</section>
+	<NuxtLayout>
+		<section
+			class="bg-center bg-cover fondo"
+		>
+			<Login/>
+		</section>
+	</NuxtLayout>
+
 </template>
 
 <style scoped>
