@@ -1,6 +1,3 @@
-
-
-
 <template>
 	<NuxtLayout name="dasboradlyt">
 		<div class="h-auto" >

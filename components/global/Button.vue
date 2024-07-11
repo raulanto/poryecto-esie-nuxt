@@ -1,6 +1,6 @@
 <template>
 	<button
-		:class="['my-button', `my-button--${props.type}`, { 'my-button--disabled': props.disabled }]"
+		:class="[,`btn-${props.type}`, { 'my-button--disabled': props.disabled }]"
 		:disabled="props.disabled"
 		@click="handleClick"
 		aria-label="button"
@@ -15,8 +15,8 @@ import { defineProps, defineEmits } from 'vue';
 const props = defineProps({
 	type: {
 		type: String,
-		default: 'primary',
-		validator: (value) => ['primary', 'secondary', 'danger'].includes(value),
+		default: 'default',
+		validator: (value) => ['default', 'red', 'green'].includes(value),
 	},
 	disabled: {
 		type: Boolean,
@@ -34,6 +34,9 @@ const handleClick = (event) => {
 </script>
 
 <style scoped>
+
+
+
 .my-button {
 	padding: 0.5em 1em;
 	border: none;
