@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import VueApexCharts from 'vue3-apexcharts'
-import { computed, watch } from 'vue'
+import {computed, watch} from 'vue'
 
 const props = defineProps({
   series1: {
@@ -44,7 +44,7 @@ chartOptions = {
       horizontal: false,
       columnWidth: '50%',
       borderRadiusApplication: 'end',
-      endingShape: 'rounded',
+
       borderRadius: 2,
       dataLabels: {
         position: 'top'
@@ -78,30 +78,32 @@ chartOptions = {
 }
 
 watch(
-  () => props.series1,
-  (newVal, oldVal) => {
-    // Perform actions when series1 changes if needed
-  },
-  { deep: true }
+    () => props.series1,
+    (newVal, oldVal) => {
+      // Perform actions when series1 changes if needed
+    },
+    {deep: true}
 )
 
 watch(
-  () => props.series2,
-  (newVal, oldVal) => {
-    // Perform actions when series2 changes if needed
-  },
-  { deep: true }
+    () => props.series2,
+    (newVal, oldVal) => {
+      // Perform actions when series2 changes if needed
+    },
+    {deep: true}
 )
 </script>
 
 <template>
   <section class="bg-white shadow-md rounded-lg p-4 ">
-    <VueApexCharts
-      :height="props.height"
-      :options="chartOptions"
-      :series="computedSeries"
-      type="bar"
-    ></VueApexCharts>
+    <ClientOnly>
+      <VueApexCharts
+          :height="props.height"
+          :options="chartOptions"
+          :series="computedSeries"
+          type="bar"
+      />
+    </ClientOnly>
   </section>
 </template>
 

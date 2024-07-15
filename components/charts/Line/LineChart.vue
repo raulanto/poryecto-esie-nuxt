@@ -251,16 +251,19 @@ chartOptions2 = {
 }
 </script>
 <template>
-  <VueApexCharts
-    type="area"
-    height="350px"
-    :options="chartOptions"
-    :series="datanueva"
-  ></VueApexCharts>
-  <VueApexCharts
-    type="area"
-    height="350px"
-    :options="chartOptions2"
-    :series="datanueva2"
-  ></VueApexCharts>
+  <ClientOnly>
+
+    <VueApexCharts
+        type="area"
+        height="350px"
+        :options="chartOptions"
+        :series="datanueva"
+    ></VueApexCharts>
+    <VueApexCharts
+        type="area"
+        height="350px"
+        :options="chartOptions2"
+        :series="datanueva2"
+    ></VueApexCharts>
+  </ClientOnly>
 </template>

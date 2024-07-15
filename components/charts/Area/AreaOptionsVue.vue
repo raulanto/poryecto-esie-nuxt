@@ -224,12 +224,14 @@ chartOptions = {
 }
 </script>
 <template>
-  <VueApexCharts
-    type="area"
-    height="350px"
-    :options="chartOptions"
-    :series="datanueva"
-  ></VueApexCharts>
+  <ClientOnly>
+    <VueApexCharts
+        :options="chartOptions"
+        :series="datanueva"
+        height="350px"
+        type="area"
+    ></VueApexCharts>
+  </ClientOnly>
 </template>
 
 <style>

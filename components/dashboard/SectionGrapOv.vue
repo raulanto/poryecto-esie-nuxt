@@ -29,6 +29,7 @@ defineProps({
 
 <template>
   <section class="rounded-lg border-gray-300 dark:border-gray-600 mb-4">
+
     <BarGrouped
       :series1="hombres"
       :series2="mujeres"

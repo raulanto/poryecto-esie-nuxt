@@ -28,5 +28,8 @@ chartOptions = {
 </script>
 
 <template>
-  <VueApexCharts type="pie" height="400" :options="chartOptions" :series="series"></VueApexCharts>
+  <ClientOnly>
+
+    <VueApexCharts type="pie" height="400" :options="chartOptions" :series="series"></VueApexCharts>
+  </ClientOnly>
 </template>

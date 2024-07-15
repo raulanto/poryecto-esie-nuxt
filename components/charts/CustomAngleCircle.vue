@@ -99,5 +99,7 @@ watch(
 </script>
 
 <template>
-  <VueApexCharts type="radialBar" height="390" :options="chartOptions" :series="series"></VueApexCharts>
+  <ClientOnly>
+    <VueApexCharts type="radialBar" height="390" :options="chartOptions" :series="series"></VueApexCharts>
+  </ClientOnly>
 </template>

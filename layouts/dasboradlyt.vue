@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const dropdownItems1 = [
     {label: 'Poblacion por rango', href: '/proyect/'},
-
+	{label: 'Poblacion por rango', href: '/proyect/'},
 ]
 </script>
 

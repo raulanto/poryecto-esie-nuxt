@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import BarGrouped from '@/components/charts/Bar/BarGrouped.vue'
 import TablaEdad from '@/components/dashboard/TablaEdad.vue'
 
@@ -29,19 +29,12 @@ defineProps({
 <template>
   <section class="rounded-lg border-gray-300 dark:border-gray-600 mb-4">
     <BarGrouped
-      :series1="hombres"
-      :series2="mujeres"
-      :categorias="rows"
-      :height="height"
+        :categorias="rows"
+        :height="height"
+        :series1="hombres"
+        :series2="mujeres"
     ></BarGrouped>
   </section>
-
-
-
-        <tabla-edad :hombres="hombres" :mujeres="mujeres" :cols="cols" :rows="rows" />
-
-
-
-
+  <tabla-edad :cols="cols" :hombres="hombres" :mujeres="mujeres" :rows="rows"/>
 
 </template>

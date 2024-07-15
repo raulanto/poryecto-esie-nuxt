@@ -1,10 +1,12 @@
 <template>
-  <VueApexCharts
-    type="bar"
-    height="440"
-    :options="chartOptions"
-    :series="computedSeries"
-  ></VueApexCharts>
+  <ClientOnly>
+    <VueApexCharts
+        type="bar"
+        height="440"
+        :options="chartOptions"
+        :series="computedSeries"
+    ></VueApexCharts>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">

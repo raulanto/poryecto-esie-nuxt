@@ -4,21 +4,18 @@
 import Login from "~/components/forms/Login.vue";
 
 definePageMeta({
-	layout: 'customlogin'
+	layout: 'home'
 });
 
 
 </script>
 
 <template>
-	<NuxtLayout>
 		<section
 			class="bg-center bg-cover fondo"
 		>
 			<Login/>
 		</section>
-	</NuxtLayout>
-
 </template>
 
 <style scoped>

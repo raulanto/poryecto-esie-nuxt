@@ -9,13 +9,12 @@ onMounted(() => {
 })
 
 definePageMeta({
-	layout: 'dasboradlyt',
-	name:'Dasborad'
-})
+	layout: 'dasboradlyt'
+});
 </script>
 
 <template>
-	<NuxtLayout name="dasboradlyt">
+	<NuxtLayout >
 		<NuxtPage/>
 	</NuxtLayout>
 </template>

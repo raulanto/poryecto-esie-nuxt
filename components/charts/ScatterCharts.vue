@@ -146,12 +146,14 @@ chartOptions = {
 </script>
 
 <template>
-  <VueApexCharts
-    :options="chartOptions"
-    :series="series"
-    height="440"
-    type="scatter"
-  ></VueApexCharts>
+  <ClientOnly>
+    <VueApexCharts
+        :options="chartOptions"
+        :series="series"
+        height="440"
+        type="scatter"
+    ></VueApexCharts>
+  </ClientOnly>
 </template>
 
 <style scoped></style>

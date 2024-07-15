@@ -124,12 +124,15 @@ chartOptions = {
 </script>
 
 <template>
-  <VueApexCharts
-    type="treemap"
-    height="440"
-    :options="chartOptions"
-    :series="series"
-  ></VueApexCharts>
+  <ClientOnly>
+
+    <VueApexCharts
+        type="treemap"
+        height="440"
+        :options="chartOptions"
+        :series="series"
+    ></VueApexCharts>
+  </ClientOnly>
 </template>
 
 <style scoped></style>

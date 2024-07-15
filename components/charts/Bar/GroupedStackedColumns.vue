@@ -124,12 +124,14 @@ watch(
 
 <template>
   <section class="bg-white shadow-md rounded-lg p-4 ">
-    <VueApexCharts
-      :height="props.height"
-      :options="chartOptions"
-      :series="series"
-      type="bar"
-    ></VueApexCharts>
+    <ClientOnly>
+      <VueApexCharts
+          :height="props.height"
+          :options="chartOptions"
+          :series="series"
+          type="bar"
+      ></VueApexCharts>
+    </ClientOnly>
   </section>
 </template>
 
