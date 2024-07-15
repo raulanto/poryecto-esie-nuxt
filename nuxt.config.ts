@@ -20,7 +20,11 @@ export default defineNuxtConfig({
         enabled: true,
       },
     },
-    modules: ["@nuxtjs/tailwindcss", '@vueuse/nuxt', ],
+    modules: [
+      "@nuxtjs/tailwindcss",
+      '@vueuse/nuxt',
+      '@nuxtjs/google-fonts',
+    ],
     css: ['/assets/css/main.css'],
     postcss: {
         plugins: {

@@ -8,12 +8,15 @@ import ReusableDropdown from '@/components/global/DropDown.vue'
 
 const isSidebarVisible = ref(false)
 
-const props = defineProps({
-  nav: {
-    type: Array,
-    required: true
-  },
-});
+const dropdownItems1 = [
+  {label: 'Poblacion por rango', href: '/proyect/'},
+]
+
+
+
+const dropdownItems2 = [
+  {label: 'Generar 9:11', href: '/herramienta/'},
+]
 
 
 
@@ -71,10 +74,16 @@ onUnmounted(() => {
 				<div>
 					<ReusableDropdown
 						:icon="Graph"
-						:items="props.nav"
+						:items="dropdownItems1"
 						buttonLabel="Poblacion"
 						dropdownId="1"
 					/>
+          <ReusableDropdown
+              :icon="Graph"
+              :items="dropdownItems2"
+              buttonLabel="Herramientas"
+              dropdownId="2"
+          />
 				</div>
 			</div>
 		</div>
