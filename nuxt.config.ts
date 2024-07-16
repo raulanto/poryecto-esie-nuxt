@@ -24,7 +24,19 @@ export default defineNuxtConfig({
       "@nuxtjs/tailwindcss",
       '@vueuse/nuxt',
       '@nuxtjs/google-fonts',
+
+      'nuxt-pdfeasy',
     ],
+    pdfeasy: {
+        defaultFileName: 'document.pdf',
+        options: {
+            margin: 1,
+            filename: 'documento.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+        },
+    },
     css: ['/assets/css/main.css'],
     postcss: {
         plugins: {
@@ -32,5 +44,6 @@ export default defineNuxtConfig({
             autoprefixer: {},
         },
     },
+
 
 })

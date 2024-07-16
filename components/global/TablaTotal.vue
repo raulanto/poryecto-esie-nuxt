@@ -1,18 +1,8 @@
 <script lang="ts" setup>
-import {computed} from 'vue'
-import Graph from "~/components/icons/Graph.vue";
-import ReusableDropdown from "~/components/global/DropDown.vue";
-import Donwload from "~/components/icons/donwload.vue";
-import Copy from "~/components/icons/copy.vue";
+import Copy from "~/components/icons/copy.vue"
+import useTableUtils from "~/composables/useTableUtils"
 
-const suma = (index: number) => {
-  return computed(() => {
-    return props.hombres.length && props.mujeres.length
-        ? props.hombres[index] + props.mujeres[index]
-        : 0
-  })
-}
-
+// Definición de las propiedades
 const props = defineProps({
   hombres: {
     type: Array,
@@ -32,57 +22,9 @@ const props = defineProps({
   }
 })
 
-const totalHombres = computed(() => {
-  return props.hombres.reduce((acc, curr) => acc + curr, 0)
-})
-
-const totalMujeres = computed(() => {
-  return props.mujeres.reduce((acc, curr) => acc + curr, 0)
-})
-
-const total = computed(() => {
-  return totalHombres.value + totalMujeres.value
-})
-
-const copyTableToClipboard = () => {
-  const table = document.getElementById('miTabla') as HTMLTableElement;
-  if (!table) return;
-
-  let tableContent = '';
-
-  // Iterate over the rows
-  for (const row of table.rows) {
-    for (const cell of row.cells) {
-      tableContent += cell.innerText + '\t'; // Add a tab to separate cells
-    }
-    tableContent += '\n'; // Add a new line for each row
-  }
-
-  navigator.clipboard.writeText(tableContent).then(() => {
-    alert('Tabla copiada al portapapeles!');
-  }, () => {
-    alert('Error al copiar la tabla.');
-  });
-}
-
-const downloadCSV = () => {
-  const rows = props.rows
-  const cols = [...props.cols]
-  const data = rows.map((row, index) => [row, props.hombres[index], props.mujeres[index]])
-
-  const csvContent = [cols.join(','), ...data.map((row) => row.join(','))].join('\n')
-
-  const blob = new Blob([csvContent], {type: 'text/csv;charset=utf-8;'})
-  const link = document.createElement('a')
-  const url = URL.createObjectURL(blob)
-  link.setAttribute('href', url)
-  link.setAttribute('download', 'poblacion_escolar.csv')
-  link.style.visibility = 'hidden'
-  document.body.appendChild(link)
-  link.click()
-  document.body.removeChild(link)
-}
+const {suma, totalHombres, totalMujeres, total, copyTableToClipboard, downloadCSV} = useTableUtils(props)
 </script>
+
 
 <template>
   <section class="relative overflow-x-auto sm:rounded-lg select-none ">
@@ -96,25 +38,24 @@ const downloadCSV = () => {
           </div>
           <div class="flex ">
             <button
-                class="flex group items-center justify-center px-2 transition   text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm  py-1.5 text-center me-2 mb-2 dark:border-primary-500 dark:text-primary-500 dark:hover:text-white dark:hover:bg-primary-500 dark:focus:ring-primary-800"
+                class="flex group items-center justify-center px-2 transition  ease-in-out hover:rounded-full  text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm  py-1.5 text-center me-2 mb-2 dark:border-primary-500 dark:text-primary-500 dark:hover:text-white dark:hover:bg-primary-500 dark:focus:ring-primary-800"
                 type="button"
                 @click="downloadCSV"
             >
               <Donwload/>
             </button>
             <button
-                class="flex items-center justify-center px-2 transition  group  text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm  py-1.5 text-center me-2 mb-2 dark:border-primary-500 dark:text-primary-500 dark:hover:text-white dark:hover:bg-primary-500 dark:focus:ring-primary-800"
+                class="flex items-center justify-center px-2 transition  ease-in-out  group hover:rounded-full text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm  py-1.5 text-center me-2 mb-2 dark:border-primary-500 dark:text-primary-500 dark:hover:text-white dark:hover:bg-primary-500 dark:focus:ring-primary-800"
                 type="button"
-                @click="copyTableToClipboard"
+                @click="copyTableToClipboard('miTabla')"
             >
               <Copy/>
             </button>
           </div>
-
-
         </div>
       </caption>
-      <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
+      <thead
+          class="text-xs text-gray-700 uppercase dark:text-gray-400">
       <tr>
         <th
             v-for="(col, index) in cols"
