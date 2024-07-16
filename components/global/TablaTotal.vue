@@ -1,6 +1,14 @@
 <script lang="ts" setup>
 import Copy from "~/components/icons/copy.vue"
+import Donwload from "~/components/icons/donwload.vue"
 import useTableUtils from "~/composables/useTableUtils"
+import { useFlowbite } from '~/composables/useFlowbite';
+// initialize components based on data attribute selectors
+onMounted(() => {
+  useFlowbite(() => {
+    initFlowbite();
+  });
+});
 
 // Definición de las propiedades
 const props = defineProps({
@@ -37,13 +45,8 @@ const {suma, totalHombres, totalMujeres, total, copyTableToClipboard, downloadCS
             <h5 class="mr-3 font-semibold dark:text-white">Poblacion Escolar por edades</h5>
           </div>
           <div class="flex ">
-            <button
-                class="flex group items-center justify-center px-2 transition  ease-in-out hover:rounded-full  text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm  py-1.5 text-center me-2 mb-2 dark:border-primary-500 dark:text-primary-500 dark:hover:text-white dark:hover:bg-primary-500 dark:focus:ring-primary-800"
-                type="button"
-                @click="downloadCSV"
-            >
-              <Donwload/>
-            </button>
+
+
             <button
                 class="flex items-center justify-center px-2 transition  ease-in-out  group hover:rounded-full text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm  py-1.5 text-center me-2 mb-2 dark:border-primary-500 dark:text-primary-500 dark:hover:text-white dark:hover:bg-primary-500 dark:focus:ring-primary-800"
                 type="button"
@@ -51,6 +54,18 @@ const {suma, totalHombres, totalMujeres, total, copyTableToClipboard, downloadCS
             >
               <Copy/>
             </button>
+
+            <tooltip :$tooltipButton="'boton1'" :$tooltipContent="'contenido'" :tittle="'Descargar'">
+              <button
+                  class="flex group items-center justify-center px-2 transition  ease-in-out hover:rounded-full  text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm  py-1.5 text-center me-2 mb-2 dark:border-primary-500 dark:text-primary-500 dark:hover:text-white dark:hover:bg-primary-500 dark:focus:ring-primary-800"
+                  type="button"
+                  @click="downloadCSV('datos')"
+              >
+                <Donwload/>
+              </button>
+            </tooltip>
+
+
           </div>
         </div>
       </caption>

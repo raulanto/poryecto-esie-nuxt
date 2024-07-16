@@ -158,6 +158,8 @@ const emit = defineEmits(['toggleSidebar']);
               >Cerrar Seccion
               </NuxtLink
               >
+
+
             </li>
           </ul>
         </div>

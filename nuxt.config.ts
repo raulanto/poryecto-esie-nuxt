@@ -11,7 +11,8 @@ export default defineNuxtConfig({
         }
     },
     plugins: [
-        { src: '~/plugins/vue-apexcharts.js', ssr: false }
+        { src: '~/plugins/vue-apexcharts.js', ssr: false },
+        { src: '~/plugins/vue-html2pdf', mode: 'client' }
     ],
     compatibilityDate: '2024-04-03',
     devtools: {
@@ -40,7 +41,10 @@ export default defineNuxtConfig({
     css: ['/assets/css/main.css'],
     postcss: {
         plugins: {
-            tailwindcss: {},
+            tailwindcss: {
+                cssPath: ['~/assets/css/tailwind.css', { injectPosition: "first" }],
+                configPath: 'tailwind.config',
+            },
             autoprefixer: {},
         },
     },
