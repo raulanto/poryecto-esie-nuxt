@@ -1,51 +1,54 @@
-<script setup lang="ts">
-import { onMounted, defineProps, ref } from 'vue';
-import { Tooltip } from 'flowbite';
+<script lang="ts" setup>
+import {defineProps, onMounted, ref} from 'vue';
+import {useFlowbite} from "~/composables/useFlowbite";
 
 const props = defineProps({
-  $tooltipContent: {
+  tooltipContent: {
     type: String,
     required: true
   },
-  $tooltipButton: {
+  placement: {
     type: String,
-    required: true
+    default: 'top'
   },
-  title: {
+  triggerType: {
     type: String,
-    required: true
+    default: 'hover'
   }
 });
 
 const targetEl = ref<HTMLElement | null>(null);
 const triggerEl = ref<HTMLElement | null>(null);
 
-
 onMounted(() => {
-  // options with default values
-  const options = {
-    placement: 'top',
-    triggerType: 'hover',
-    onHide: () => {
-      console.log('tooltip is hidden');
-    },
-    onShow: () => {
-      console.log('tooltip is shown');
-    }
-  };
+  useFlowbite(() => {
+    const options = {
+      placement: props.placement,
+      triggerType: props.triggerType,
+      onHide: () => {
+        console.log('tooltip is hidden');
+      },
+      onShow: () => {
+        console.log('tooltip is shown');
+      }
+    };
 
-  // asegúrate de que targetEl y triggerEl no sean nulos
-  if (targetEl.value && triggerEl.value) {
-    const tooltip = new Tooltip(targetEl.value, triggerEl.value, options);
-  }
+    if (targetEl.value && triggerEl.value) {
+      new Tooltip(targetEl.value, triggerEl.value, options);
+    }
+  })
+
 });
 </script>
 
 <template>
-  <div class="flex justify-center max-w-2xl p-4 mx-auto pt-26">
-    <slot :id="triggerEl" />
-    <div :id="targetEl" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-      {{ props.title }}
+  <div class="">
+    <div ref="triggerEl">
+      <slot/>
+    </div>
+    <div ref="targetEl" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-gray-950 border transition-opacity duration-300 bg-white rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+         role="tooltip">
+      {{ tooltipContent }}
       <div class="tooltip-arrow" data-popper-arrow></div>
     </div>
   </div>

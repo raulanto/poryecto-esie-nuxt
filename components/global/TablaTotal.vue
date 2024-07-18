@@ -1,14 +1,9 @@
 <script lang="ts" setup>
-import Copy from "~/components/icons/copy.vue"
-import Donwload from "~/components/icons/donwload.vue"
+
 import useTableUtils from "~/composables/useTableUtils"
-import { useFlowbite } from '~/composables/useFlowbite';
-// initialize components based on data attribute selectors
-onMounted(() => {
-  useFlowbite(() => {
-    initFlowbite();
-  });
-});
+import Copy from "~/components/icons/copy.vue";
+import Donwload from "~/components/icons/donwload.vue";
+
 
 // Definición de las propiedades
 const props = defineProps({
@@ -47,21 +42,23 @@ const {suma, totalHombres, totalMujeres, total, copyTableToClipboard, downloadCS
           <div class="flex ">
 
 
-            <button
-                class="flex items-center justify-center px-2 transition  ease-in-out  group hover:rounded-full text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm  py-1.5 text-center me-2 mb-2 dark:border-primary-500 dark:text-primary-500 dark:hover:text-white dark:hover:bg-primary-500 dark:focus:ring-primary-800"
-                type="button"
-                @click="copyTableToClipboard('miTabla')"
-            >
-              <Copy/>
-            </button>
-
-            <tooltip :$tooltipButton="'boton1'" :$tooltipContent="'contenido'" :tittle="'Descargar'">
+            <tooltip tooltipContent="Copiar">
               <button
-                  class="flex group items-center justify-center px-2 transition  ease-in-out hover:rounded-full  text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm  py-1.5 text-center me-2 mb-2 dark:border-primary-500 dark:text-primary-500 dark:hover:text-white dark:hover:bg-primary-500 dark:focus:ring-primary-800"
+                  class="flex items-center justify-center px-2 transition  ease-in-out  group hover:rounded-full text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm  py-1.5 text-center me-2 mb-2 dark:border-primary-500 dark:text-primary-500 dark:hover:text-white dark:hover:bg-primary-500 dark:focus:ring-primary-800"
                   type="button"
-                  @click="downloadCSV('datos')"
+                  @click="copyTableToClipboard('miTabla')"
               >
-                <Donwload/>
+                <copy/>
+              </button>
+            </tooltip>
+
+            <tooltip tooltipContent="Descargar">
+              <button
+                  class="flex items-center justify-center px-2 transition  ease-in-out  group hover:rounded-full text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm  py-1.5 text-center me-2 mb-2 dark:border-primary-500 dark:text-primary-500 dark:hover:text-white dark:hover:bg-primary-500 dark:focus:ring-primary-800"
+                  type="button"
+                  @click="downloadCSV('descagar pdf')"
+              >
+                <donwload/>
               </button>
             </tooltip>
 
@@ -88,8 +85,8 @@ const {suma, totalHombres, totalMujeres, total, copyTableToClipboard, downloadCS
           :key="index"
           class="group hover:bg-gray-50 dark:hover:bg-gray-600 bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:font-bold"
       >
-        <td class="px-6 py-4 group-hover:text-blue-700">{{ row }}</td>
-        <td class="px-6 py-4 group-hover:text-orange-400">{{ hombres[index] }}</td>
+        <td class="px-6 py-4 group-hover:text-orange-500">{{ row }}</td>
+        <td class="px-6 py-4 group-hover:text-primary-600">{{ hombres[index] }}</td>
         <td class="px-6 py-4 group-hover:text-amber-400">{{ mujeres[index] }}</td>
         <td class="px-6 py-4 group-hover:text-green-400">{{ suma(index) }}</td>
       </tr>
@@ -105,7 +102,7 @@ const {suma, totalHombres, totalMujeres, total, copyTableToClipboard, downloadCS
               Total
             </span>
         </td>
-        <td class="px-6 py-4 text-orange-400">{{ totalHombres }}</td>
+        <td class="px-6 py-4 text-primary-600">{{ totalHombres }}</td>
         <td class="px-6 py-4 text-amber-400">{{ totalMujeres }}</td>
         <td class="px-6 py-4 text-green-400">{{ total }}</td>
       </tr>

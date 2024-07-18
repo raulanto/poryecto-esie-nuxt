@@ -1,7 +1,5 @@
 <script setup lang="ts">
 
-import SectionGrap from "~/components/dashboard/SectionGrap.vue";
-import SectionGrapOv from "~/components/dashboard/SectionGrapOv.vue";
 </script>
 
 <template>
@@ -11,7 +9,7 @@ import SectionGrapOv from "~/components/dashboard/SectionGrapOv.vue";
     <ul
         id="default-styled-tab"
         class="flex flex-wrap justify-center items-center -mb-px text-sm font-medium text-center rounded-lg bg-white shadow-md"
-        data-tabs-active-classes="text-orange-600 hover:text-orange-600 dark:text-orange-500 dark:hover:text-orange-500 border-orange-600 dark:border-orange-500"
+        data-tabs-active-classes="text-primary-600 hover:text-primary-600 dark:text-primary-500 dark:hover:text-primary-500 border-primary-600 dark:border-primary-500"
         data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
         data-tabs-toggle=""
         role="tablist"

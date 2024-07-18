@@ -34,7 +34,7 @@ defineProps({
         <CardText :carrera="valorCarrera" :name="'Carrera'" :periodo="valorperiodo"></CardText>
     </article>
     <article class="">
-        <Card :color="'#d97706'" :name="'Hombres'" :series="rangoEdadHombre"></Card>
+        <Card :color="'#1d4ed8'" :name="'Hombres'" :series="rangoEdadHombre"></Card>
     </article>
     <div class="">
         <Card :color="'#fcd34d'" :name="'Mujeres'" :series="rangoEdadMujer"></Card>

@@ -46,10 +46,10 @@ let chartOptions: ApexCharts.ApexOptions = {
       },
       dataLabels: {
         name: {
-          show: false,
+          show: true,
         },
         value: {
-          show: false,
+          show: true,
         }
       },
       barLabels: {
@@ -63,14 +63,14 @@ let chartOptions: ApexCharts.ApexOptions = {
       },
     }
   },
-  colors: ['#f29602', '#fda10d', '#fda821',
-    '#fdb035','#fdb849'],
+  colors: ['#1e40af', '#1d4ed8', '#2563eb',
+    '#3b82f6','#60a5fa'],
   labels: ['Menor a 20', '20-24', '25-29', '30-34', 'Mayor a 34'],
   responsive: [{
     breakpoint: 480,
     options: {
       legend: {
-        show: false
+        show: true
       }
     }
   }]

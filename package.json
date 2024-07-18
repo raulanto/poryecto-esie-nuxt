@@ -12,14 +12,8 @@
   "dependencies": {
     "apexcharts": "^3.50.0",
     "flowbite": "^2.4.1",
-    "flowbite-vue": "^0.1.5",
-    "html-to-canvas": "^0.0.11",
-    "html2canvas": "^1.4.1",
-    "html2pdf.js": "^0.10.2",
     "nuxt": "^3.12.3",
-    "pdf-lib": "^1.17.1",
     "vue": "latest",
-    "vue-html2pdf": "^1.8.0",
     "vue3-apexcharts": "^1.5.3"
   },
   "devDependencies": {

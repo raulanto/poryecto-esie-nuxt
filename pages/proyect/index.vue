@@ -139,26 +139,15 @@ definePageMeta({
   layout: 'dasboradlyt'
 });
 
-// Define la referencia para vue-html2pdf
-const pdfRef = ref(null);
-
-// Define la función para generar el PDF
-const generatePDF = () => {
-  pdfRef.value.generatePdf();
-};
 
 </script>
 
 
 <template>
-  <client-only>
-    <vue-html2pdf
-        ref="pdfRef"
-        :show-layout="false"
-        :enable-download="true"
-        filename="documento.pdf"
-        :pdf-quality="2">
-      <div class="h-auto" >
+
+
+
+      <div class="h-auto">
         <section
             class="flex bg-white  flex-col md:flex-row rounded-lg border-gray-100 shadow-md shadow-black/5 dark:border-gray-600 mb-4 p-4 space-y-4 md:space-y-0 md:space-x-4"
         >
@@ -231,10 +220,9 @@ const generatePDF = () => {
           </tablalist>
         </section>
       </div>
-    </vue-html2pdf>
-    <button @click="generatePDF">Generar PDF</button>
 
-  </client-only>
+
+
 
 
 </template>

@@ -38,7 +38,7 @@ chartOptions = {
     height: 350,
     fontFamily: 'Inter, sans-serif'
   },
-  colors: ['#d97706', '#fcd34d'],
+  colors: ['#1d4ed8', '#fcd34d'],
   plotOptions: {
     bar: {
       horizontal: false,
