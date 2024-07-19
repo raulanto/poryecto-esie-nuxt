@@ -30,17 +30,20 @@ defineProps({
 </script>
 
 <template>
+  <section class="relative grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-4 mb-4">
     <article class="">
-        <CardText :carrera="valorCarrera" :name="'Carrera'" :periodo="valorperiodo"></CardText>
+      <CardText :carrera="valorCarrera" :name="'Carrera'" :periodo="valorperiodo"></CardText>
     </article>
     <article class="">
-        <Card :color="'#1d4ed8'" :name="'Hombres'" :series="rangoEdadHombre"></Card>
+      <Card :color="'#1d4ed8'" :name="'Hombres'" :series="rangoEdadHombre"></Card>
     </article>
     <div class="">
-        <Card :color="'#fcd34d'" :name="'Mujeres'" :series="rangoEdadMujer"></Card>
+      <Card :color="'#fcd34d'" :name="'Mujeres'" :series="rangoEdadMujer"></Card>
     </div>
     <div class="">
-        <Card :color="'#29c937'" :name="'Total'" :series="rangoTotal"></Card>
+      <Card :color="'#29c937'" :name="'Total'" :series="rangoTotal"></Card>
     </div>
+  </section>
+
 </template>
 
