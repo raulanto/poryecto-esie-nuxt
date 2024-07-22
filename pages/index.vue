@@ -1,6 +1,18 @@
 // eslint-disable-next-line vue/multi-word-component-names
 <script lang="ts" setup>
+import SectionGrap from "~/components/page/sectionGrap.vue";
+import carreras from "assets/json/carrera.json";
+import periodos from "assets/json/periodo.json";
+import modalidades from "assets/json/modalidad.json";
 
+import tec from "assets/json/tec.json";
+import SectionCard from "~/components/dashboard/SectionCard.vue";
+
+const hombres= [55, 60, 4, 0, 3]
+const mujeres= [27, 22, 1, 0, 4]
+const cols2 = ['Menor a 20', '20-24', '25-29', '30-34', 'Mayor a 34']
+const romws = ['Menor a 20', '20-24', '25-29', '30-34', 'Mayor a 34']
+const  data =343
 definePageMeta({
   layout: 'home',
 });
@@ -107,6 +119,34 @@ definePageMeta({
     </div>
   </section>
 
+<!--Yo abdo programando una vida juntos-->
 
+  <section>
+    <div class="items-center py-8 px-4 mx-auto max-w-screen-xl ">
+      <section class="section-card">
+        <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
+          <h5 class="text-h5">Sistema de integración escolar</h5>
+          <h1 ref="animatedText" class="text-h1">Población Escolar</h1>
+
+          <section class="flex">
+            <SelectInput v-model="selectedCareer" :options="tec" inputId="universi" label="Universidad"/>
+            <SelectInput v-model="selectedPeriod" :options="carreras" inputId="carreras" label="Carreras"/>
+
+          </section>
+
+        </div>
+
+      </section>
+
+      <div>
+        <SectionGrap :height="'400'" :cols="cols2" :rows="romws" :mujeres="mujeres" :hombres="hombres"/>
+      </div>
+      <div class="mt-4 md:mt-0">
+        <section class="section-card">
+          dsdsd
+        </section>
+      </div>
+    </div>
+  </section>
 
 </template>
