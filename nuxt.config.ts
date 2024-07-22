@@ -17,10 +17,12 @@ export default defineNuxtConfig({
         "@nuxtjs/tailwindcss",
         '@vueuse/nuxt',
         '@nuxtjs/google-fonts',
+        "nuxt-driver.js"
     ],
 
     plugins: [
         {src: '~/plugins/vue-apexcharts.js', ssr: false},
+
     ],
     postcss: {
         plugins: {

@@ -1,14 +1,19 @@
 <script lang="ts" setup>
 import {useDataHandler} from '~/composables/useDataHandler';
-import Tablalist from "~/components/global/tablalist.vue";
-import SectionGrap from '~/components/dashboard/SectionGrap.vue';
-import SectionCard from "~/components/dashboard/SectionCard.vue";
-import SectionGrapOv from '~/components/dashboard/SectionGrapOv.vue';
-import modalidad from 'assets/json/modalidad.json'
+import {useFilteredPlans} from "~/composables/useFilteredPlans";
+import {onMounted} from 'vue';
+import {driver} from "driver.js";
+import {useFlowbite} from "~/composables/useFlowbite";
 import jsonData2 from 'assets/json/poblacion.json';
 import jsonData1 from 'assets/json/poblacionRango.json';
 import carreras from 'assets/json/carrera.json';
 import periodos from 'assets/json/periodo.json';
+import plan from 'assets/json/planCarrera.json';
+import modalidades from 'assets/json/modalidad.json';
+
+import SectionCard from "~/components/dashboard/SectionCard.vue";
+import SectionGrapOv from "~/components/dashboard/SectionGrapOv.vue";
+import SectionGrap from "~/components/dashboard/SectionGrap.vue";
 
 const cols2 = ['Menor a 20', '20-24', '25-29', '30-34', 'Mayor a 34']
 const romws = [
@@ -43,84 +48,109 @@ const {
   rangoTotal,
   valorCarrera,
   valorperiodo,
+  valormodalidad,
   updateData
-} = useDataHandler(jsonData1, jsonData2, carreras, periodos);
+} = useDataHandler(jsonData1, jsonData2, carreras, periodos, modalidades);
+
+
+const {
+  selectedPlan,
+  filteredPlans
+} = useFilteredPlans(plan, selectedCareer, selectedPeriod, selectedModalidad);
+
+
+onMounted(() => {
+  useFlowbite(() => {
+    initFlowbite();
+  });
+  const driverL = driver({
+    showProgress: true,
+    animate: true,
+
+    steps: [
+      {
+        element: "#welcome",
+        popover: {
+          title: "Bienvenido a EsieGraph",
+          description:
+              "Sistema estadistico de Poblacion",
+          side: "bottom",
+        },
+      },
+      {
+        element: "#opcion1",
+        popover: {
+          title: "Selecion de Carrera y periodo",
+          description:
+              "Esta opcion permite elegir el periodo y la carrera",
+          side: "bottom",
+        },
+      },
+      {
+        element: "#opcion2",
+        popover: {
+          title: "Targetas",
+          description:
+              "Aqui se mostrara un conteo general de Hombres y mujeres",
+          side: "bottom",
+        },
+      },
+      {
+        element: "#opcion3",
+        popover: {
+          title: "Graficas",
+          description:
+              "Se mustran los resultados obtenidos",
+          side: "top",
+        },
+      },
+    ],
+  });
+
+});
+
 
 definePageMeta({
   layout: 'dasboradlyt'
 });
 </script>
 
-
 <template>
-
-
-  <div class="h-auto">
-    <section class="section-card ">
+  <div id="welcome" class="h-auto">
+    <section class="section-card">
       <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
-        <h5 class="text-h5">Sistema de integracion escolar</h5>
-        <h1
-            ref="animatedText"
-            class="text-h1">
-          Poblacion Escolar
-        </h1>
+        <h5 class="text-h5">Sistema de integración escolar</h5>
+        <h1 ref="animatedText" class="text-h1">Población Escolar</h1>
+        <section class="flex">
+          <SelectInput v-model="selectedCareer" :options="carreras" inputId="career" label="Carrera"/>
+          <SelectInput v-model="selectedPeriod" :options="periodos" inputId="period" label="Periodo"/>
+          <SelectInput v-model="selectedModalidad" :options="modalidades" inputId="modad" label="Modalidad"/>
+        </section>
+
       </div>
+
     </section>
-    <section
-        class="section-card">
-      <SelectInput v-model="selectedCareer" :options="carreras" inputId="career" label="Carrera"/>
-      <SelectInput v-model="selectedPeriod" :options="periodos" inputId="period" label="Periodo"/>
-      <SelectInput v-model="selectedModalidad" :options="modalidad" inputId="modali" label="Modalidad"/>
-    </section>
-    <section>
+
+    <section id="opcion2">
       <SectionCard :rangoEdadHombre="rangoEdadHombre" :rangoEdadMujer="rangoEdadMujer" :rangoTotal="rangoTotal"
-                   :valorCarrera="valorCarrera" :valorperiodo="valorperiodo"></SectionCard>
+                   :valorCarrera="valorCarrera" :valormodalidad="valormodalidad" :valorperiodo="valorperiodo"/>
     </section>
-    <section
-        class="rounded-lg ">
+    <section id="opcion3" class="rounded-lg">
       <tablalist>
-        <div
-            id="styled-profile"
-            aria-labelledby="profile-tab"
-            class="hidden rounded-md "
-            role="tabpanel"
-        >
-          <SectionGrapOv
-              :cols="cols"
-              :height="'440'"
-              :hombres="rangoEdadHombre"
-              :mujeres="rangoEdadMujer"
-              :rows="cols2"
-          />
+        <div id="styled-profile" aria-labelledby="profile-tab" class="hidden rounded-md" role="tabpanel">
+          <SectionGrapOv :cols="cols" :height="'440'" :hombres="rangoEdadHombre" :mujeres="rangoEdadMujer"
+                         :rows="cols2"/>
         </div>
-        <div
-            id="styled-dashboard"
-            aria-labelledby="dashboard-tab"
-            class="hidden  rounded-md "
-            role="tabpanel"
-        >
-          <SectionGrap
-              :cols="cols"
-              :height="'600'"
-              :hombres="edadHombre"
-              :mujeres="edadMujer"
-              :rows="romws"
-          />
+        <div id="styled-dashboard" aria-labelledby="dashboard-tab" class="hidden rounded-md" role="tabpanel">
+          <SectionGrap :cols="cols" :height="'600'" :hombres="edadHombre" :mujeres="edadMujer" :rows="romws"/>
         </div>
-        <div
-            id="contacts" aria-labelledby="contacts-tab" class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
-            role="tabpanel">
-          <SectionGrap
-              :cols="cols"
-              :height="'600'"
-              :hombres="edadHombre"
-              :mujeres="edadMujer"
-              :rows="romws"
-          />
+        <div id="contacts" aria-labelledby="contacts-tab" class="hidden rounded-md " role="tabpanel">
+          <section class="section-card">
+            <SelectInput v-model="selectedPlan" :options="filteredPlans" inputId="plan" label="Plan"/>
+          </section>
+
         </div>
       </tablalist>
     </section>
   </div>
-
-
 </template>

@@ -1,53 +1,35 @@
-<script setup lang="ts">
+<script setup>
+import {onMounted, ref, computed} from 'vue'
+import carreras from "assets/json/carrera.json";
+import periodos from "assets/json/periodo.json";
+import modalidades from "assets/json/modalidad.json";
+import plan from "assets/json/planCarrera.json"; // Importando el plan desde el archivo JSON
+
+const selectedCareer = ref('1');
+const selectedPeriod = ref('1');
+const selectedModalidad = ref('1');
+const selectedPlan = ref('');
+
+const filteredPlans = computed(() => {
+  return plan.filter(p =>
+      p.carrera === Number(selectedCareer.value) &&
+      p.periodo === Number(selectedPeriod.value) &&
+      p.modalidad === Number(selectedModalidad.value)
+  );
+});
+
 definePageMeta({
   layout: 'dasboradlyt'
 });
 </script>
 
 <template>
-  <body>
-  <div id="wrapper">
-    <header>
-      <div class="container">Reach: http://www.reachsos.com/</div>
-    </header>
-    <div class="container">
-      Visita, comenta y comparte ;)!
-    </div>
-    <footer>
-      <div class="container">Blog: http://blog.epicalsoft.com/</div>
-    </footer>
-  </div>
-  </body>
+  <section id="opcion1" class="section-card">
+    <SelectInput v-model="selectedCareer" :options="carreras" inputId="career" label="Carrera"/>
+    <SelectInput v-model="selectedPeriod" :options="periodos" inputId="period" label="Periodo"/>
+    <SelectInput v-model="selectedModalidad" :options="modalidades" inputId="modad" label="Modalidad"/>
+  </section>
+  <section class="section-card">
+    <SelectInput v-model="selectedPlan" :options="filteredPlans" inputId="plan" label="Plan"/>
+  </section>
 </template>
-
-<style >
-html{
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
-}
-#wrapper{
-  padding-bottom: 81px;
-  min-height: calc(100% - 81px);
-  position: relative;
-}
-
-header {
-  color: white;
-  background-color: #0086CD;
-}
-
-footer {
-  color: white;
-  background-color: #1A1A1A;
-  width: 100%;
-  height: 81px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.container {
-  padding:12px;
-}
-</style>

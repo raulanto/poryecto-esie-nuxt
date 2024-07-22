@@ -1,18 +1,18 @@
 [
   {
     "value": 1,
-    "plan": "WSED-2002-2004"
+    "label": "WSED-2002-2004"
   },
   {
     "value": 1,
-    "plan": "WSED-WERE"
+    "label": "WSED-WERE"
   },
   {
     "value": 1,
-    "plan": "WSED-WERE"
+    "label": "WSED-WERE"
   },
   {
     "value": 1,
-    "plan": "WSED-WERE"
+    "label": "WSED-WERE"
   }
 ]

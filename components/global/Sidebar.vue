@@ -84,6 +84,7 @@ onUnmounted(() => {
               buttonLabel="Herramientas"
               dropdownId="2"
           />
+          <slot></slot>
 				</div>
 			</div>
 		</div>

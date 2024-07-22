@@ -46,10 +46,10 @@ let chartOptions: ApexCharts.ApexOptions = {
       },
       dataLabels: {
         name: {
-          show: true,
+          show: false,
         },
         value: {
-          show: true,
+          show: false,
         }
       },
       barLabels: {
