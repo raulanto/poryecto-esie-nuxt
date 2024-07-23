@@ -15,8 +15,13 @@ export function usefilteredDataPlans(plan,selectedPlan){
         return dataFilter.value ? dataFilter.value.mujeres : [];
     });
 
+    const planname = computed(() => {
+        return dataFilter.value ? dataFilter.value.label : [];
+    });
+
     return{
         dataFilter,
+        planname,
         hombresPlan,
         mujeresPlan
     }

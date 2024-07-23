@@ -26,6 +26,10 @@ defineProps({
   valormodalidad: {
     type: String,
     required: true
+  },
+  name: {
+    type: String,
+    required: true
   }
 
 })
@@ -36,7 +40,7 @@ defineProps({
 <template>
   <section class="relative grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-4 mb-4">
     <article class="">
-      <CardText :carrera="valorCarrera" :name="'Carrera'" :periodo="valorperiodo" :modalidad="valormodalidad"></CardText>
+      <CardText :carrera="valorCarrera" :name="name" :periodo="valorperiodo" :modalidad="valormodalidad"></CardText>
     </article>
     <article class="">
       <Card :color="'#1d4ed8'" :name="'Hombres'" :series="rangoEdadHombre"></Card>
