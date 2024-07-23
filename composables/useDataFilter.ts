@@ -1,10 +1,11 @@
 // composables/useDataFilter.js
-import { computed } from 'vue';
-
+import {computed} from 'vue';
+// @ts-ignore
 export function useDataFilter(data, carreras, periodos, modalidades, selectedCareer, selectedPeriod, selectedModalidad) {
 
     const filteredData = computed(() => {
-        return data.value?.find(d =>
+        // @ts-ignore
+        return data?.find(d =>
             d.carrera === Number(selectedCareer.value) &&
             d.periodo === Number(selectedPeriod.value) &&
             d.modalidad === Number(selectedModalidad.value)
@@ -12,16 +13,19 @@ export function useDataFilter(data, carreras, periodos, modalidades, selectedCar
     });
 
     const selectedCareerName = computed(() => {
+        // @ts-ignore
         const career = carreras?.find(c => c.value === Number(selectedCareer.value));
         return career ? career.label : '';
     });
 
     const selectedPeriodName = computed(() => {
+        // @ts-ignore
         const period = periodos?.find(p => p.value === Number(selectedPeriod.value));
         return period ? period.label : '';
     });
 
     const selectedModalidadName = computed(() => {
+        // @ts-ignore
         const modalidad = modalidades?.find(m => m.value === Number(selectedModalidad.value));
         return modalidad ? modalidad.label : '';
     });

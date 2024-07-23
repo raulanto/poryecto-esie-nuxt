@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full">
+  <section class="w-full mx-2">
     <label
         :for="props.inputId"
         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"

@@ -31,27 +31,36 @@
     "label": "G GAST-2010-215",
     "carrera": 2,
     "periodo": 1,
-    "modalidad": 2
+    "modalidad": 2,
+    "hombres": [55, 72, 4, 0, 3],
+    "mujeres": [32, 17, 4, 2, 1]
   },
   {
     "value": 5,
     "label": "G GAST-2010-217",
     "carrera": 2,
     "periodo": 1,
-    "modalidad": 2
+    "modalidad": 2,
+    "hombres": [55, 72, 4, 0, 3],
+    "mujeres": [32, 17, 4, 2, 1]
   },
   {
     "value": 6,
     "label": "A IADM-2010-213",
     "carrera": 3,
     "periodo": 1,
-    "modalidad": 1
+    "modalidad": 1,
+    "hombres": [55, 72, 4, 0, 3],
+    "mujeres": [32, 17, 4, 2, 1]
   },
   {
     "value": 7,
     "label": "W IADM-2010-213",
     "carrera": 4,
     "periodo": 1,
-    "modalidad": 1
+    "modalidad": 1,
+    "hombres": [55, 72, 4, 0, 3],
+    "mujeres": [32, 17, 4, 2, 1]
   }
 ]
+

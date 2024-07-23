@@ -1,4 +1,5 @@
 import { computed } from 'vue'
+// @ts-ignore
 import { ComputedRef } from 'vue'
 
 // Definición de tipos
