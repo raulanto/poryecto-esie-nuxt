@@ -11,6 +11,7 @@ import plan from "assets/json/planCarrera.json";
 import SectionCard from "~/components/dashboard/SectionCard.vue";
 import SectionGrapOv from "~/components/dashboard/SectionGrapOv.vue";
 import SectionGrap from "~/components/dashboard/SectionGrap.vue";
+import Prueba from "~/components/global/prueba.vue";
 
 
 
@@ -41,7 +42,7 @@ const cols = ['Intervalo de edad', 'Hombre', 'Mujer']
 const selectedCareer = ref('1');
 const selectedPeriod = ref('1');
 const selectedModalidad = ref('1');
-const selectedPlan = ref('1');
+const selectedPlan = ref('');
 const {
   filteredData,
   selectedCareerName,
@@ -105,6 +106,7 @@ definePageMeta({
 
           <SectionGrapOv :cols="cols" :height="'440'" :hombres="hombresPlan" :mujeres="mujeresPlan"
                          :rows="cols2"/>
+          <prueba></prueba>
         </div>
       </tablalist>
     </section>
