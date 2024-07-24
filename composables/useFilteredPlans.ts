@@ -7,7 +7,7 @@ export function useFilteredPlans(plan, selectedCareer, selectedPeriod, selectedM
     const filteredPlans = computed(() => {
         // Filtrado por carrera perido y modalidad
         // @ts-ignore
-        return plan.filter(p =>
+        return plan?.filter(p =>
             p.carrera === Number(selectedCareer.value) &&
             p.periodo === Number(selectedPeriod.value) &&
             p.modalidad === Number(selectedModalidad.value)

@@ -2,7 +2,7 @@
 import {ref} from 'vue';
 import {useDataFilter} from '~/composables/useDataFilter.ts';
 import {useFilteredPlans} from "~/composables/useFilteredPlans.ts";
-import  {usefilteredDataPlans} from "~/composables/usefilteredDataPlans.ts";
+import {usefilteredDataPlans} from "~/composables/usefilteredDataPlans.ts";
 import carreras from 'assets/json/carrera.json';
 import periodos from 'assets/json/periodo.json';
 import modalidades from 'assets/json/modalidad.json';
@@ -14,28 +14,8 @@ import SectionGrap from "~/components/dashboard/SectionGrap.vue";
 import Prueba from "~/components/global/prueba.vue";
 
 
-
 const cols2 = ['Menor a 20', '20-24', '25-29', '30-34', 'Mayor a 34']
-const romws = [
-  'Menores a 18',
-  '18',
-  '19',
-  '20',
-  '21',
-  '22',
-  '23',
-  '24',
-  '25',
-  '26',
-  '27',
-  '28',
-  '29',
-  '30',
-  '31',
-  '32',
-  '33',
-  'Mayores de 34'
-]
+const romws = ['Menores a 18', '18', '20', '19', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', 'Mayores de 34']
 const cols = ['Intervalo de edad', 'Hombre', 'Mujer']
 
 // Selectores de carrera , periodo  y modalidad
@@ -63,7 +43,7 @@ const {
   dataFilter,
   hombresPlan,
   mujeresPlan
-} = usefilteredDataPlans(plan,selectedPlan)
+} = usefilteredDataPlans(plan, selectedPlan)
 
 definePageMeta({
   layout: 'dasboradlyt'
@@ -86,10 +66,12 @@ definePageMeta({
     </section>
     <!--  sector de targetas  -->
     <section id="opcion2">
-      <SectionCard :rangoEdadHombre="hombresRango" :rangoEdadMujer="mujeresRango" :rangoTotal="sumArrays(hombresRango,mujeresRango)"
-                   :valorCarrera="selectedCareerName" :valormodalidad="selectedModalidadName" :valorperiodo="selectedPeriodName"/>
+      <SectionCard :rangoEdadHombre="hombresRango" :rangoEdadMujer="mujeresRango"
+                   :rangoTotal="sumArrays(hombresRango, mujeresRango)"
+                   :valorCarrera="selectedCareerName" :valormodalidad="selectedModalidadName"
+                   :valorperiodo="selectedPeriodName"/>
     </section>
-<!--  Sector tablas de lista  -->
+    <!--  Sector tablas de lista  -->
     <section id="opcion3" class="rounded-lg">
       <tablalist>
         <div id="styled-profile" aria-labelledby="profile-tab" class="hidden rounded-md" role="tabpanel">
@@ -103,7 +85,6 @@ definePageMeta({
           <section class="section-card">
             <SelectInput v-model="selectedPlan" :options="filteredPlans" inputId="plan" label="Plan"/>
           </section>
-
           <SectionGrapOv :cols="cols" :height="'440'" :hombres="hombresPlan" :mujeres="mujeresPlan"
                          :rows="cols2"/>
           <prueba></prueba>
@@ -111,5 +92,4 @@ definePageMeta({
       </tablalist>
     </section>
   </div>
-
 </template>
