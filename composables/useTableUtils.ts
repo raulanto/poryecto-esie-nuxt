@@ -46,7 +46,9 @@ export default function useTableUtils(props: Props) {
     }
 
     // Función para descargar CSV
-    const downloadCSV = (fileName: string = 'poblacion_escolar.csv') => {
+    const downloadCSV = (
+        fileName: string = 'poblacion_escolar.csv'
+        ) => {
         const rows = props.rows
         const cols = [...props.cols, 'Total Hombres', 'Total Mujeres', 'Total']
         const data = rows.map((row, index) => [row, props.hombres[index], props.mujeres[index], suma(index).value])

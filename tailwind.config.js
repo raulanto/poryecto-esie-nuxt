@@ -67,7 +67,11 @@ export default {
             ]
         }
     },
-    plugins: [flowbite()],
+    plugins: [flowbite(),
+        require('flowbite/plugin')({
+            charts: true,
+        }),],
+
 
 }
 

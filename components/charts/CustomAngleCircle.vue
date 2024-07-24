@@ -24,7 +24,7 @@ const series = computed(() => (
    sumarArrays(props.series1, props.series2)
 ));
 
-console.log(series.value[0])
+
 
 
 // Opciones del gráfico
@@ -79,7 +79,6 @@ let chartOptions: ApexCharts.ApexOptions = {
 watch(
   () => props.series1,
   (newVal, oldVal) => {
-
   },
   { deep: true }
 )
@@ -87,7 +86,6 @@ watch(
 watch(
   () => props.series2,
   (newVal, oldVal) => {
-
   },
   { deep: true }
 )

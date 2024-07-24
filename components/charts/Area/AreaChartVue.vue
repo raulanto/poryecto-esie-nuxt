@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import VueApexCharts from 'vue3-apexcharts'
-import { defineProps } from 'vue'
+import {defineProps, watch} from 'vue'
 
 const props = defineProps({
   series: {
@@ -168,6 +168,24 @@ chartOptions = {
     }
   }
 }
+
+
+watch(
+    () => props.series,
+    (newVal, oldVal) => {
+      // Perform actions when series1 changes if needed
+    },
+    {deep: true}
+)
+watch(
+    () => props.fecha,
+    (newVal, oldVal) => {
+      // Perform actions when series1 changes if needed
+    },
+    {deep: true}
+)
+
+
 </script>
 <template>
   <ClientOnly>

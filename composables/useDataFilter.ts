@@ -46,6 +46,7 @@ export function useDataFilter(data, carreras, periodos, modalidades, selectedCar
         return filteredData.value ? filteredData.value.mujeresRango : [];
     });
 
+
     return {
         filteredData,
         selectedCareerName,

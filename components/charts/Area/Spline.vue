@@ -27,51 +27,23 @@ const computedSeries = computed(() => [
   },
   {
     name: 'Mujeres',
-    data: props.series2 // Negativo para apilar en la dirección opuesta
+    data: props.series2
   }
 ])
 
 let chartOptions: ApexCharts.ApexOptions
 chartOptions = {
   chart: {
-    type: 'bar',
-    height: 600,
-    fontFamily: 'Inter, sans-serif'
+    height: 350,
+    type: 'area'
   },
   colors: ['#1d4ed8', '#fcd34d'],
-  plotOptions: {
-    bar: {
-      horizontal: false,
-      columnWidth: '50%',
-      borderRadiusApplication: 'end',
-
-      borderRadius: 2,
-      dataLabels: {
-        position: 'top'
-      }
-    }
-  },
-  tooltip: {
-    shared: true,
-    intersect: false,
-    style: {
-      fontFamily: 'Inter, sans-serif'
-    }
-  },
   dataLabels: {
-    enabled: false,
-    offsetX: -6,
-    style: {
-      fontSize: '12px',
-      colors: ['#fff']
-    }
+    enabled: false
   },
   stroke: {
-    show: true,
-    width: 1,
-    colors: ['transparent']
+    curve: 'smooth'
   },
-
   xaxis: {
     categories: props.categorias
   }
@@ -80,7 +52,6 @@ chartOptions = {
 watch(
     () => props.series1,
     (newVal, oldVal) => {
-      // Perform actions when series1 changes if needed
     },
     {deep: true}
 )
@@ -88,7 +59,6 @@ watch(
 watch(
     () => props.series2,
     (newVal, oldVal) => {
-      // Perform actions when series2 changes if needed
     },
     {deep: true}
 )
@@ -101,7 +71,7 @@ watch(
           :height="props.height"
           :options="chartOptions"
           :series="computedSeries"
-          type="bar"
+          type="area"
       />
     </ClientOnly>
   </section>

@@ -25,12 +25,6 @@ onMounted(() => {
     const options = {
       placement: props.placement,
       triggerType: props.triggerType,
-      onHide: () => {
-        console.log('tooltip is hidden');
-      },
-      onShow: () => {
-        console.log('tooltip is shown');
-      }
     };
 
     if (targetEl.value && triggerEl.value) {

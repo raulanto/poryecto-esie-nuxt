@@ -10,6 +10,7 @@ const isSidebarVisible = ref(false)
 
 const dropdownItems1 = [
   {label: 'Poblacion por rango', href: '/proyect/'},
+  {label: 'Historico', href: '/proyect/historico'},
 ]
 
 

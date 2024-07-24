@@ -32,44 +32,23 @@ defineProps({
 
 <template>
   <section class=" rounded-lg border-gray-300 dark:border-gray-600 mb-4">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
-
-      <div class="">
         <BarGrouped
             :series1="hombres"
             :series2="mujeres"
             :categorias="rows"
             :height="height"
         ></BarGrouped>
-      </div>
-      <div class=" lg:col-span-2">
-
-        <Spline
-            :series1="hombres"
-            :series2="mujeres"
-            :categorias="rows"
-            :height="height"
-
-        ></Spline>
-      </div>
-    </div>
   </section>
 
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-4">
     <div class="bg-white border border-gray-100 shadow-md shadow-black/5 rounded-md lg:col-span-2">
       <section class="">
-        <tabla-edad
-            :hombres="hombres"
-            :mujeres="mujeres"
-            :cols="cols"
-            :rows="rows"/>
+        <tabla-edad :hombres="hombres" :mujeres="mujeres" :cols="cols" :rows="rows"/>
       </section>
 
     </div>
     <div class="bg-white border border-gray-100 shadow-md shadow-black/5 p-6 rounded-md">
-      <custom-angle-circle
-          :series1="hombres"
-          :series2="mujeres"/>
+      <custom-angle-circle :series1="hombres" :series2="mujeres"></custom-angle-circle>
     </div>
   </div>
 </template>
