@@ -28,6 +28,7 @@ const emit = defineEmits(['toggleSidebar']);
         </a>
       </div>
       <div class="flex items-center lg:order-2">
+        <darkmode/>
         <button
             id="user-menu-button"
             aria-expanded="false"

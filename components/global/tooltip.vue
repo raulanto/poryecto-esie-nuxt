@@ -28,6 +28,7 @@ onMounted(() => {
     };
 
     if (targetEl.value && triggerEl.value) {
+      //esto esta rojo por que esta hot
       new Tooltip(targetEl.value, triggerEl.value, options);
     }
   })

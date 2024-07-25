@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import {onMounted, onUnmounted, ref} from 'vue'
+import Icon4 from "~/components/icons/icon4.vue";
 
 interface DropdownItem {
   label: string
@@ -53,19 +54,7 @@ onUnmounted(() => {
     >
       <component :is="icon"/>
       <span class="flex-1 ml-3 text-left whitespace-nowrap">{{ buttonLabel }}</span>
-      <svg
-          aria-hidden="true"
-          class="w-6 h-6"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-            clip-rule="evenodd"
-            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 111.414 1.414l-4 4a1 1 01-1.414 0l-4-4a1 1 010-1.414z"
-            fill-rule="evenodd"
-        ></path>
-      </svg>
+      <icon4/>
     </button>
     <transition name="fade">
       <ul v-if="isDropdownOpen" :id="`dropdown-${props.dropdownId}`" class="py-2 space-y-2">
