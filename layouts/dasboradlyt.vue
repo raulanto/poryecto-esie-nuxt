@@ -1,8 +1,5 @@
 <script setup lang="ts">
-const dropdownItems1 = [
-    {label: 'Poblacion por rango', href: '/proyect/'},
-	{label: 'Poblacion por rango', href: '/proyect/'},
-]
+
 </script>
 
 <template>
@@ -13,6 +10,7 @@ const dropdownItems1 = [
 		</section>
 
 	</section>
+  <footer-dasborad></footer-dasborad>
 </template>
 
 <style scoped>

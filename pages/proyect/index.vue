@@ -77,8 +77,8 @@ definePageMeta({
 <template>
   <div>
     <!--  Sector de select  -->
-    <section id="opcion1" class="section-card">
-      <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
+    <section id="opcion1" class="section-card mb-4">
+      <div class="relative w-full pr-4 max-w-full flex-grow flex-1 ">
         <h5 class="text-h5">Sistema de integración escolar</h5>
         <h1 ref="animatedText" class="text-h1">Población Escolar</h1>
         <section class="flex">

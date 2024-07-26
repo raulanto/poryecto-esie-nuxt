@@ -1,107 +1,27 @@
 <script setup lang="ts">
 import VueApexCharts from 'vue3-apexcharts'
-import { defineProps } from 'vue'
+import {defineProps} from 'vue'
 
-// const props = defineProps({
-//     series: {
-//         type: Array,
-//         required: false
-//     },
-//     name: {
-//         type: String,
-//         required: false
-//     },
-//     fecha: {
-//         type: Array,
-//         required: false
-//     }
-// })
-//
-// let chartSeries = props.series
-// let labelValor = props.name
-//
-// const datanueva = [
-//     {
-//         name: labelValor,
-//         data: chartSeries
-//     }
-// ]
-
-// function findMaxMin(array) {
-//     if (!Array.isArray(array) || array.length === 0) {
-//         throw new Error('El arreglo no debe estar vacío.')
-//     }
-//     let max = array[0]
-//     let min = array[0]
-//     for (let i = 1; i < array.length; i++) {
-//         if (array[i] > max) {
-//             max = array[i]
-//         }
-//         if (array[i] < min) {
-//             min = array[i]
-//         }
-//     }
-//     return {max, min}
-// }
-//
-// const result = findMaxMin(props.series)
-// const maximo = parseFloat(result.max)
-// const minimo = parseFloat(result.min)
-
+const colors = ['#1e40af', '#1d4ed8', '#2563eb', '#3b82f6', '#60a5fa']
+const tectFormt ="'Dsitribucion de personas por carrera'"
 const series = [
   {
     data: [
       {
-        x: 'New Delhi',
-        y: 218
+        x: 'Ing en sistemas',
+        y: 345
       },
       {
-        x: 'Kolkata',
+        x: 'gastronomia',
         y: 149
       },
       {
-        x: 'Mumbai',
+        x: 'Ing en admin',
         y: 184
       },
       {
-        x: 'Ahmedabad',
+        x: 'ing Admin',
         y: 55
-      },
-      {
-        x: 'Bangaluru',
-        y: 84
-      },
-      {
-        x: 'Pune',
-        y: 31
-      },
-      {
-        x: 'Chennai',
-        y: 70
-      },
-      {
-        x: 'Jaipur',
-        y: 30
-      },
-      {
-        x: 'Surat',
-        y: 44
-      },
-      {
-        x: 'Hyderabad',
-        y: 68
-      },
-      {
-        x: 'Lucknow',
-        y: 28
-      },
-      {
-        x: 'Indore',
-        y: 19
-      },
-      {
-        x: 'Kanpur',
-        y: 29
       }
     ]
   }
@@ -110,29 +30,43 @@ let chartOptions: ApexCharts.ApexOptions
 chartOptions = {
   chart: {
     legend: {
-      show: false
+      show: true
     },
     chart: {
-      height: 350,
+      height: 250,
       type: 'treemap'
     },
     title: {
       text: 'Basic Treemap'
+    },
+
+  },
+  title: {
+    text: tectFormt,
+    align: 'center'
+  },
+  colors: colors,
+  plotOptions: {
+    treemap: {
+      distributed: true,
+      enableShades: false
     }
   }
 }
 </script>
 
 <template>
-  <ClientOnly>
+  <section class="bg-white shadow-md rounded-lg p-4 mb-4">
+    <ClientOnly>
+      <VueApexCharts
+          type="treemap"
+          height="440"
+          :options="chartOptions"
+          :series="series"
+      ></VueApexCharts>
+    </ClientOnly>
+  </section>
 
-    <VueApexCharts
-        type="treemap"
-        height="440"
-        :options="chartOptions"
-        :series="series"
-    ></VueApexCharts>
-  </ClientOnly>
 </template>
 
 <style scoped></style>

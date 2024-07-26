@@ -71,5 +71,14 @@
     "hombresRango": [55, 72, 4, 0, 3],
     "mujeresRango": [32, 17, 4, 2, 1],
     "modalidad": 1
+  },
+  {
+    "carrera": 4,
+    "periodo": 6,
+    "hombres": [1, 31, 30, 22, 22, 13, 11, 2, 3, 0, 2, 0, 0, 0, 0, 0, 0, 4],
+    "mujeres": [0, 26, 27, 23, 23, 15, 10, 2, 1, 0, 1, 0, 0, 0, 0, 0, 0, 5],
+    "hombresRango": [55, 72, 4, 0, 3],
+    "mujeresRango": [32, 17, 4, 2, 1],
+    "modalidad": 1
   }
 ]

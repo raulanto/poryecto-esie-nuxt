@@ -15,32 +15,31 @@ defineProps({
     type: Array,
     required: true
   },
-  valorCarrera: {
+  text2: {
     type: String,
-    required: true
+
   },
-  valorperiodo: {
+  text3: {
     type: String,
-    required: true
+
   },
-  valormodalidad: {
+  text4: {
     type: String,
-    required: true
+
   },
-  name: {
+  text: {
     type: String,
-    required: true
+
   }
 
 })
-
 
 </script>
 
 <template>
   <section class="relative grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-4 mb-4">
     <article class="">
-      <CardText :carrera="valorCarrera" :name="name" :periodo="valorperiodo" :modalidad="valormodalidad"></CardText>
+      <CardText :text2="text2" :text3="text3" :text="text" :text4="text4"></CardText>
     </article>
     <article class="">
       <Card :color="'#1d4ed8'" :name="'Hombres'" :series="rangoEdadHombre"></Card>
