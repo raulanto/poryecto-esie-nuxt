@@ -16,7 +16,7 @@ import SectionGrapTable from "~/components/dashboard/SectionGrapTable.vue";
 
 const cols2 = ['Menor a 20', '20-24', '25-29', '30-34', 'Mayor a 34']
 const romws = [
-  'Menores a 18',
+  '-18',
   '18',
   '19',
   '20',
@@ -33,7 +33,7 @@ const romws = [
   '31',
   '32',
   '33',
-  'Mayores de 34'
+  '34+'
 ]
 const cols = ['Intervalo de edad', 'Hombre', 'Mujer']
 
@@ -124,14 +124,12 @@ definePageMeta({
         </div>
         <!--Segunda opcion opcion-->
         <div id="styled-dashboard" aria-labelledby="dashboard-tab" class="hidden rounded-md" role="tabpanel">
-          <div v-if="filteredData">
             <SectionGrap
                 :cols="cols"
-                :height="'600'"
+                :height="'420'"
                 :hombres="hombres"
                 :mujeres="mujeres"
                 :rows="romws"/>
-          </div>
         </div>
         <!--Tercera opcion opcion-->
         <div id="contacts" aria-labelledby="contacts-tab" class="hidden rounded-md " role="tabpanel">

@@ -2,17 +2,14 @@
 <script lang="ts" setup>
 import SectionGrap from "~/components/page/sectionGrap.vue";
 import carreras from "assets/json/carrera.json";
-import periodos from "assets/json/periodo.json";
-import modalidades from "assets/json/modalidad.json";
 
 import tec from "assets/json/tec.json";
-import SectionCard from "~/components/dashboard/SectionCard.vue";
 
-const hombres= [55, 60, 4, 0, 3]
-const mujeres= [27, 22, 1, 0, 4]
+const hombres = [55, 60, 4, 0, 3]
+const mujeres = [27, 22, 1, 0, 4]
 const cols2 = ['Menor a 20', '20-24', '25-29', '30-34', 'Mayor a 34']
 const romws = ['Menor a 20', '20-24', '25-29', '30-34', 'Mayor a 34']
-const  data =343
+const data = 343
 definePageMeta({
   layout: 'home',
 });
@@ -77,7 +74,6 @@ definePageMeta({
       </div>
     </div>
   </section>
-
   <section class="bg-white dark:bg-gray-900">
     <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
       <img
@@ -118,9 +114,7 @@ definePageMeta({
       </div>
     </div>
   </section>
-
-<!--Yo abdo programando una vida juntos-->
-
+  <!--Yo ando programando una vida juntos-->
   <section>
     <div class="items-center py-8 px-4 mx-auto max-w-screen-xl ">
       <section class="section-card">
@@ -139,7 +133,7 @@ definePageMeta({
       </section>
 
       <div>
-        <SectionGrap :height="'400'" :cols="cols2" :rows="romws" :mujeres="mujeres" :hombres="hombres"/>
+        <SectionGrap :cols="cols2" :height="'400'" :hombres="hombres" :mujeres="mujeres" :rows="romws"/>
       </div>
       <div class="mt-4 md:mt-0">
         <section class="section-card">

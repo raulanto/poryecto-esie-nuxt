@@ -27,7 +27,7 @@ defineProps({
 </script>
 
 <template>
-  <section class="rounded-lg border-gray-300 dark:border-gray-600 mb-4">
+  <section class="rounded-lg border-gray-300 dark:border-gray-600 mb-4 ">
     <BarGrouped
         :categorias="rows"
         :height="height"
@@ -35,6 +35,8 @@ defineProps({
         :series2="mujeres"
     ></BarGrouped>
   </section>
-  <tabla-edad :cols="cols" :hombres="hombres" :mujeres="mujeres" :rows="rows"/>
+  <section class="h-[420px] overscroll-contain overflow-y-auto overflow-hidden">
+    <tabla-edad :cols="cols" :hombres="hombres" :mujeres="mujeres" :rows="rows"/>
+  </section>
 
 </template>

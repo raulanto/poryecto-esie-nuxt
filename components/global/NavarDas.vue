@@ -28,7 +28,7 @@ const emit = defineEmits(['toggleSidebar']);
         </a>
       </div>
       <div class="flex items-center lg:order-2">
-        <darkmode/>
+
         <button
             id="user-menu-button"
             aria-expanded="false"
@@ -154,13 +154,9 @@ const emit = defineEmits(['toggleSidebar']);
           >
             <li>
               <NuxtLink class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-
                         to="/"
               >Cerrar Seccion
-              </NuxtLink
-              >
-
-
+              </NuxtLink>
             </li>
           </ul>
         </div>

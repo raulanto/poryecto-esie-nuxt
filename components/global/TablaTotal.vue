@@ -30,7 +30,7 @@ const {suma, totalHombres, totalMujeres, total, copyTableToClipboard, downloadCS
 
 
 <template>
-  <section class="relative overflow-x-auto sm:rounded-lg select-none ">
+  <section class="relative overflow-x-auto overflow-y-auto sm:rounded-lg select-none ">
     <table id="miTabla" class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
       <caption
           class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800"
