@@ -17,7 +17,8 @@ const props = defineProps({
   },
   height: {
     type: String,
-    required: false
+    required: false,
+    default:"340"
   }
 })
 const computedSeries = computed(() => [

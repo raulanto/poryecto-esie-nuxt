@@ -26,7 +26,7 @@ let color = props.color
 
 <template>
 
-    <div class="card flex flex-col justify-center px-2 py-4 text-center break-words bg-white mb-6 xl:mb-0  h-32 select-none border-gray-100 shadow-md shadow-black/5 rounded-lg dark:border-gray-600">
+    <div class="card flex flex-col justify-center px-2 py-4 text-center break-words bg-white mb-6 xl:mb-0 h-full select-none border-gray-100 shadow-md shadow-black/5 rounded-lg dark:border-gray-600">
       <dt class="order-last text-lg font-medium text-gray-500">
               {{ props.name }}
       </dt>

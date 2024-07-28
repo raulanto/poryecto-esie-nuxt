@@ -1,9 +1,8 @@
 <script lang="ts" setup>
 import {defineProps, onMounted, onUnmounted, ref} from 'vue'
-import {useFlowbite} from '~/composables/useFlowbite';
 
 import Graph from '@/components/icons/Graph.vue'
-import Line from '@/components/icons/Line.vue'
+
 import ReusableDropdown from '@/components/global/DropDown.vue'
 
 const isSidebarVisible = ref(false)
@@ -11,6 +10,7 @@ const isSidebarVisible = ref(false)
 const dropdownItems1 = [
   {label: 'Poblacion por rango', href: '/proyect/'},
   {label: 'Historico', href: '/proyect/historico'},
+  {label: 'prueba', href: '/proyect/poblacion'},
 ]
 
 
@@ -46,17 +46,13 @@ const handleResize = () => {
 onMounted(() => {
 	document.addEventListener('click', handleClickOutside)
 	window.addEventListener('resize', handleResize)
-	useFlowbite(() => {
-		initFlowbite();
-	})
+
 })
 
 onUnmounted(() => {
 	document.removeEventListener('click', handleClickOutside)
 	window.removeEventListener('resize', handleResize)
-  useFlowbite(() => {
-    initFlowbite();
-  })
+
 })
 </script>
 
@@ -71,7 +67,7 @@ onUnmounted(() => {
 			class="fixed top-0 left-0 z-40 w-64 h-screen p-2 pt-14 transition-transform bg-white dark:bg-gray-800"
 			tabindex="-1"
 		>
-			<div class="overflow-y-auto py-5 px-2 h-full bg-white dark:bg-gray-800">
+			<section class="overflow-y-auto py-5 px-2 h-full bg-white dark:bg-gray-800">
 				<div>
 					<ReusableDropdown
 						:icon="Graph"
@@ -87,7 +83,7 @@ onUnmounted(() => {
           />
           <slot></slot>
 				</div>
-			</div>
+			</section>
 		</div>
 	</transition>
 

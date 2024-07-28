@@ -1,31 +1,24 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import VueApexCharts from 'vue3-apexcharts'
-import {defineProps} from 'vue'
+import {watch} from 'vue'
+
+const props = defineProps({
+  series: {
+    type: Array,
+    required: false
+  }
+})
+watch(
+    () => props.series,
+    (newVal, oldVal) => {
+      // Perform actions when series1 changes if needed
+    },
+    {deep: true}
+)
 
 const colors = ['#1e40af', '#1d4ed8', '#2563eb', '#3b82f6', '#60a5fa']
-const tectFormt ="'Dsitribucion de personas por carrera'"
-const series = [
-  {
-    data: [
-      {
-        x: 'Ing en sistemas',
-        y: 345
-      },
-      {
-        x: 'gastronomia',
-        y: 149
-      },
-      {
-        x: 'Ing en admin',
-        y: 184
-      },
-      {
-        x: 'ing Admin',
-        y: 55
-      }
-    ]
-  }
-]
+const tectFormt = "'Dsitribucion de personas por carrera'"
+
 let chartOptions: ApexCharts.ApexOptions
 chartOptions = {
   chart: {
@@ -59,10 +52,10 @@ chartOptions = {
   <section class="bg-white shadow-md rounded-lg p-4 mb-4">
     <ClientOnly>
       <VueApexCharts
-          type="treemap"
-          height="440"
           :options="chartOptions"
           :series="series"
+          height="440"
+          type="treemap"
       ></VueApexCharts>
     </ClientOnly>
   </section>

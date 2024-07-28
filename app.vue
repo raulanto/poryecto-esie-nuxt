@@ -2,7 +2,7 @@
 import { onMounted } from 'vue';
 import { useFlowbite } from '~/composables/useFlowbite';
 
-// initialize components based on data attribute selectors
+
 onMounted(() => {
   useFlowbite(() => {
     initFlowbite();
@@ -39,7 +39,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
+  <div class="bg-gray-50 ">
     <NuxtLayout>
       <NuxtPage  />
     </NuxtLayout>

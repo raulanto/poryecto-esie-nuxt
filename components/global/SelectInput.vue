@@ -24,7 +24,7 @@ const props = defineProps({
   label: String,
   options: Array,
   inputId: String,
-  modelValue: String,
+  modelValue: Number,
   defaultOption: {
     type: String,
     default: 'Seleccione una opción'

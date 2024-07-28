@@ -3,6 +3,7 @@
 import useTableUtils from "~/composables/useTableUtils"
 import Copy from "~/components/icons/copy.vue";
 import Donwload from "~/components/icons/donwload.vue";
+import Tooltip from "~/components/footer/tooltip.vue";
 
 
 // Definición de las propiedades

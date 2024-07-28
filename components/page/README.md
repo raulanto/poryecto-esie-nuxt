@@ -1,4 +1,4 @@
-# Nuxt 3 Pages
+# Nuxt 3 middleware
 
 ```vue
 pages/

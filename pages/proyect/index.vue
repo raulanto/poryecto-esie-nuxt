@@ -37,11 +37,10 @@ const romws = [
 ]
 const cols = ['Intervalo de edad', 'Hombre', 'Mujer']
 
-// Selectores de carrera , periodo  y modalidad
-const selectedCareer = ref('1');
-const selectedPeriod = ref('1');
-const selectedModalidad = ref('1');
-const selectedPlan = ref('');
+const selectedCareer = ref(1);
+const selectedPeriod = ref(1);
+const selectedModalidad = ref(1);
+const selectedPlan = ref();
 
 // filtro de  datos
 const {
@@ -72,10 +71,17 @@ definePageMeta({
   layout: 'dasboradlyt'
 });
 
+onMounted(() => {
+  useFlowbite(() => {
+    initFlowbite();
+  });
+});
+
+
 </script>
 
 <template>
-  <div>
+  <div class="">
     <!--  Sector de select  -->
     <section id="opcion1" class="section-card mb-4">
       <div class="relative w-full pr-4 max-w-full flex-grow flex-1 ">
@@ -102,13 +108,13 @@ definePageMeta({
     <!--  sector de targetas  -->
     <section id="opcion2">
       <SectionCard
-          :name="'Carrera'"
+          :text="'Carrera'"
           :rangoEdadHombre="hombresRango"
           :rangoEdadMujer="mujeresRango"
           :rangoTotal="sumArrays(hombresRango,mujeresRango)"
-          :valorCarrera="selectedCareerName"
-          :valormodalidad="selectedModalidadName"
-          :valorperiodo="selectedPeriodName"/>
+          :text2="selectedCareerName"
+          :text4=" `Modalidad - ${selectedModalidadName}`"
+          :text3="selectedPeriodName"/>
     </section>
     <!--  Sector tablas de lista  -->
     <section id="opcion3" class="rounded-lg">
@@ -122,7 +128,7 @@ definePageMeta({
               :mujeres="mujeresRango"
               :rows="cols2"/>
         </div>
-        <!--Segunda opcion opcion-->
+        <!--Segunda opcion -->
         <div id="styled-dashboard" aria-labelledby="dashboard-tab" class="hidden rounded-md" role="tabpanel">
             <SectionGrap
                 :cols="cols"
@@ -131,22 +137,22 @@ definePageMeta({
                 :mujeres="mujeres"
                 :rows="romws"/>
         </div>
-        <!--Tercera opcion opcion-->
+        <!--Tercera opcion -->
         <div id="contacts" aria-labelledby="contacts-tab" class="hidden rounded-md " role="tabpanel">
-          <section class="section-card">
+          <div class="section-card mb-4">
             <SelectInput
                 v-model="selectedPlan"
                 :options="filteredPlans"
                 inputId="plan" label="Plan"/>
-          </section>
+          </div>
           <SectionCard
               :rangoEdadHombre="hombresPlan"
-              :name="'Plan'"
+              :text="'Plan'"
               :rangoEdadMujer="mujeresPlan"
               :rangoTotal="sumArrays(hombresPlan,mujeresPlan)"
-              :valorCarrera="planname"
-              :valormodalidad="selectedModalidadName"
-              :valorperiodo="selectedPeriodName"/>
+              :text2="planname"
+              :text3="selectedPeriodName"
+              :text4=" `Modalidad - ${selectedModalidadName}`"/>
           <SectionGrapTable
               :cols="cols"
               :height="'600'"
@@ -156,7 +162,6 @@ definePageMeta({
         </div>
 
       </tablalist>
-
     </section>
   </div>
 

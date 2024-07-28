@@ -1,7 +1,8 @@
 [
   {
     "value": 1,
-    "label": "Ing en sistemas computacionales"
+    "label": "Ingenieria en sistemas computacionales",
+    "nombreCort": "Ing en Sis Computa"
   },
   {
     "value": 2,
@@ -14,5 +15,9 @@
   {
     "value": 4,
     "label": "Ing en Adminis"
+  },
+  {
+    "value": 5,
+    "label": "Ing en Petrolera"
   }
 ]

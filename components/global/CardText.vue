@@ -21,7 +21,7 @@ defineProps({
 
 <template>
   <div
-      class="relative flex  flex-col min-w-0  break-words bg-white h-32 mb-6 xl:mb-0 select-none border-gray-100 shadow-md shadow-black/5 rounded-lg dark:border-gray-600"
+      class="relative flex  flex-col min-w-0  break-words bg-white min-h-32 mb-6 xl:mb-0 select-none border-gray-100 shadow-md shadow-black/5 rounded-lg dark:border-gray-600"
   >
     <div class="flex-auto p-4">
       <div class="flex flex-wrap">
