@@ -16,7 +16,7 @@ const dropdownItems1 = [
 
 
 const dropdownItems2 = [
-  {label: 'Generar 9:11', href: '/herramienta/'},
+  {label: 'Generar 911.9A', href: '/herramienta/'},
 ]
 
 
