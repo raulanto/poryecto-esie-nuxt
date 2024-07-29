@@ -22,6 +22,7 @@ export default defineNuxtConfig({
 
     plugins: [
         {src: '~/plugins/vue-apexcharts.js', ssr: false},
+        { src: '@/plugins/vue-html2pdf.js', mode: 'client' }
 
     ],
     postcss: {
