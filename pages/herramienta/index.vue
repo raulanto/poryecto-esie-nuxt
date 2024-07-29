@@ -1,16 +1,17 @@
-<script setup >
+<script setup>
 import Pag1 from "~/pages/herramienta/9119A/pag1.vue";
 import carreras from "assets/json/carrera.json";
 import Tabla from "~/components/herramienta/tabla.vue";
+import Pag2 from "~/pages/herramienta/9119A/pag2.vue";
+import Pag3 from "~/pages/herramienta/9119A/pag3.vue";
+import Pag4 from "~/pages/herramienta/9119A/pag4.vue";
 
-definePageMeta({
-  layout: 'dasboradlyt'
-});
 
-
+definePageMeta({layout: 'dasboradlyt'});
 </script>
 
 <template>
+
   <section id="opcion1" class="section-card mb-4">
     <div class="relative w-full pr-4 max-w-full flex-grow flex-1 ">
       <h5 class="text-h5">Generacion de reportes</h5>
@@ -26,8 +27,8 @@ definePageMeta({
   </section>
 
 
-  <div class="w-full max-w-screen-xl">
-    <!-- Start coding here -->
+  <div class="w-full mb-4">
+
     <div class="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
       <div class="flex-row items-center justify-between p-4 space-y-3 sm:flex sm:space-y-0 sm:space-x-4">
         <div>
@@ -43,14 +44,19 @@ definePageMeta({
     </div>
   </div>
 
-
-      <section slot="pdf-content">
-        <section class="section-card">
-          <section  class="overflow-scroll h-80 scale-90">
-            <pag1/>
-          </section>
-        </section>
+  <section slot="pdf-content">
+    <section class="section-card">
+      <section class="overflow-scroll h-[600px]   gap-3">
+        <pag1 class="my-2"></pag1>
+        <pag2 class="my-2"></pag2>
+        <pag3 class="my-2"></pag3>
+        <pag4 class="my-2"></pag4>
       </section>
-
+    </section>
+  </section>
   <tabla></tabla>
+
+  <!--<section class="  ">-->
+  <!--    <pag4/>-->
+  <!--  </section>-->
 </template>
