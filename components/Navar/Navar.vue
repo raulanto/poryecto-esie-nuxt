@@ -55,14 +55,7 @@ const activeLink = computed(() => route.path);
                 Escuela
               </NuxtLink>
             </li>
-            <li>
-              <NuxtLink
-                  :class="['nav-link block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 dark:text-white', activeLink === '/servicio' ? 'bg-primary-700 text-primary-700' : 'text-gray-700']"
-                  to="/servicio"
-              >
-                Servicio
-              </NuxtLink>
-            </li>
+
 
           </ul>
         </div>
