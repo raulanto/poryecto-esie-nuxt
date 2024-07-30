@@ -4,7 +4,7 @@ defineProps({
     type: String,
   },
   totalpagina: {
-    type: String,
+    type:Number,
 
   }
 })

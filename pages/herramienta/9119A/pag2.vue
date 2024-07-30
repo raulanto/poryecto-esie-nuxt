@@ -54,7 +54,7 @@ const totalpagina = 12
                     <label class=" mb-2 text-sm text-secundary-50 font-bold ">
                       Año
                     </label>
-                    <div class="flex">
+                    <div class="flex ">
                       <input
                           class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
                           maxlength="1"

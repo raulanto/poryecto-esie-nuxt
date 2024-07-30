@@ -12,7 +12,7 @@ const props = defineProps({
     <label class="block  text-sm text-secundary-50 font-bold " for="remember">{{ name }}</label>
     <div class="flex items-center h-5">
       <input :id="name"
-             class="w-6 h-6 text-secundary-50 border border-secundary-50 rounded bg-gray-50 focus:ring-3 focus:ring-secundary-50 "
+             class="w-4 h-4 text-secundary-50 text-secundary-50 border border-secundary-50 rounded bg-gray-50 focus:ring-3 focus:ring-secundary-50 "
              required
              type="checkbox"
              value=""/>
