@@ -55,22 +55,22 @@ const totalpagina = 12
                            </label>
                            <div class="flex">
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
@@ -86,22 +86,22 @@ const totalpagina = 12
                            </label>
                            <div class="flex">
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
@@ -117,22 +117,22 @@ const totalpagina = 12
                            </label>
                            <div class="flex">
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
@@ -166,22 +166,22 @@ const totalpagina = 12
                            </label>
                            <div class="flex flex-nowrap ">
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
@@ -195,22 +195,22 @@ const totalpagina = 12
                            </label>
                            <div class="flex">
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
@@ -226,22 +226,22 @@ const totalpagina = 12
                            </label>
                            <div class="flex">
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
@@ -257,18 +257,18 @@ const totalpagina = 12
                            </label>
                            <div class="flex">
                               <input
-                                  class="block w-9 h-9 py-3  text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
 
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
@@ -284,18 +284,18 @@ const totalpagina = 12
                            </label>
                            <div class="flex">
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
 
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
@@ -333,22 +333,22 @@ const totalpagina = 12
                            </label>
                            <div class="flex">
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
@@ -364,22 +364,22 @@ const totalpagina = 12
                            </label>
                            <div class="flex">
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
@@ -395,22 +395,22 @@ const totalpagina = 12
                            </label>
                            <div class="flex">
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
@@ -424,18 +424,18 @@ const totalpagina = 12
                            </label>
                            <div class="flex">
                               <input
-                                  class="block w-8 h-8 py-3  text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
 
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
@@ -451,18 +451,18 @@ const totalpagina = 12
                            </label>
                            <div class="flex">
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>
 
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center text-gray-900 bg-white border border-secundary-50  "
                                   maxlength="1"
                                   required
                                   type="text"/>
                               <input
-                                  class="block w-8 h-8 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
+                                  class="block w-11 h-11  font-extrabold  text-xl  text-center  text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
                                   maxlength="1"
                                   required
                                   type="text"/>

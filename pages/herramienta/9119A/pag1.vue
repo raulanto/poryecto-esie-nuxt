@@ -7,7 +7,7 @@ const cicloEscolar = ref("2022-2024")
 </script>
 
 <template>
-  <section class="bg-white min-h-screen flex flex-col">
+  <section class="bg-white min-h-screen max-w-screen-2xl flex flex-col">
     <header>
       <nav class="w-full  text-white bg-secundary-50 h-28 flex items-center justify-between px-8">
         <div class="">
@@ -39,35 +39,35 @@ const cicloEscolar = ref("2022-2024")
           </label>
           <div class="flex">
             <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
-                maxlength="1" required type="text"/>
+                class="block w-11 h-11  font-extrabold  text-xl  text-center   border border-secundary-50 roun rounded-l-lg"
+                maxlength="1"  type="text"/>
             <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
+                class="block w-11 h-11  font-extrabold  text-xl    text-center   border border-secundary-50 "
+                maxlength="1"  type="text"/>
             <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
+                class="block w-11 h-11  font-extrabold  text-xl   text-center   border border-secundary-50 "
+                maxlength="1"  type="text"/>
             <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
+                class="block w-11 h-11  font-extrabold  text-xl   text-center   border border-secundary-50 "
+                maxlength="1"  type="text"/>
             <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
+                class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 "
+                maxlength="1"  type="text"/>
             <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
+                class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 "
+                maxlength="1"  type="text"/>
             <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
+                class="block w-11 h-11  font-extrabold  text-xl   text-center   border border-secundary-50 "
+                maxlength="1"  type="text"/>
             <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
+                class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 "
+                maxlength="1"  type="text"/>
             <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
+                class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 "
+                maxlength="1"  type="text"/>
             <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
-                maxlength="1" required type="text"/>
+                class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 roun rounded-r-lg"
+                maxlength="1"  type="text"/>
           </div>
         </div>
         <div>
@@ -83,38 +83,38 @@ const cicloEscolar = ref("2022-2024")
           <label class="block mb-1 text-sm text-secundary-50 font-bold ">
             Clave de la Escuela:
           </label>
-          <div class="flex">
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
-                maxlength="1" required type="text"/>
-          </div>
+           <div class="flex">
+              <input
+                  class="block w-11 h-11  font-extrabold  text-xl  text-center   border border-secundary-50 roun rounded-l-lg"
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11  font-extrabold  text-xl    text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11  font-extrabold  text-xl   text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11  font-extrabold  text-xl   text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11  font-extrabold  text-xl   text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 roun rounded-r-lg"
+                  maxlength="1"  type="text"/>
+           </div>
         </div>
         <div>
           <label class="block mb-1 text-sm text-secundary-50 font-bold ">
@@ -128,38 +128,38 @@ const cicloEscolar = ref("2022-2024")
         <div class="flex mb-1 space-x-2 rtl:space-x-reversen items-center">
           <label class="block mb-1 text-sm text-secundary-50 font-bold ">
             Clave de la Carrera </label>
-          <div class="flex">
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50 roun rounded-l-lg"
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  "
-                maxlength="1" required type="text"/>
-            <input
-                class="block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-secundary-50  rounded-r-lg"
-                maxlength="1" required type="text"/>
-          </div>
+           <div class="flex">
+              <input
+                  class="block w-11 h-11  font-extrabold  text-xl  text-center   border border-secundary-50 roun rounded-l-lg"
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11  font-extrabold  text-xl    text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11  font-extrabold  text-xl   text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11  font-extrabold  text-xl   text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11  font-extrabold  text-xl   text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 "
+                  maxlength="1"  type="text"/>
+              <input
+                  class="block w-11 h-11 font-extrabold  text-xl   text-center   border border-secundary-50 roun rounded-r-lg"
+                  maxlength="1"  type="text"/>
+           </div>
         </div>
         <div>
           <label class="block mb-2 text-sm text-secundary-50 font-bold ">
@@ -180,7 +180,7 @@ const cicloEscolar = ref("2022-2024")
           </div>
         </section>
         <section class="my-8">
-          <h4 class=" bg-secundary-50 text-white text-center">No Escolarizada</h4>
+          <h4 class=" bg-secundary-50 text-white text-center py-1">No Escolarizada</h4>
           <div class="flex justify-between items-center  my-2">
 
             <imput-checkbox name="'Escolarizada'"/>
@@ -203,7 +203,7 @@ const cicloEscolar = ref("2022-2024")
         </section>
       </section>
       <section>
-        <h4 class="bg-secundary-50 mx-14 my-2 text-white text-center font-bold">Sólo para Instituciones Particulares
+        <h4 class="bg-secundary-50 mx-14 my-2 text-white text-center font-bold py-1">Sólo para Instituciones Particulares
         </h4>
         <section class="grid gap-6 mb-6 md:grid-cols-2 mx-14 my-2">
 

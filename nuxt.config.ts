@@ -14,16 +14,16 @@ export default defineNuxtConfig({
         },
     },
     modules: [
-        "@nuxtjs/tailwindcss",
-        '@vueuse/nuxt',
-        '@nuxtjs/google-fonts',
-        "nuxt-driver.js"
+      "@nuxtjs/tailwindcss",
+      '@vueuse/nuxt',
+      '@nuxtjs/google-fonts',
+      "nuxt-driver.js",
+      'nuxt-pdfeasy',
     ],
 
     plugins: [
-        {src: '~/plugins/vue-apexcharts.js', ssr: false},
-        { src: '@/plugins/vue-html2pdf.js', mode: 'client' }
-
+        {src:  '~/plugins/vue-apexcharts.js', ssr: false},
+        '~/plugins/pdfmake.js'
     ],
     postcss: {
         plugins: {
