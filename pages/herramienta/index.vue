@@ -1,3 +1,4 @@
+<!--
 <template>
    <section id="opcion1" class="section-card mb-4">
       <div class="relative w-full pr-4 max-w-full flex-grow flex-1 ">
@@ -37,7 +38,7 @@
       </div>
    </div>
 
-   <!-- Sección que se va a capturar y convertir a PDF -->
+   &lt;!&ndash; Sección que se va a capturar y convertir a PDF &ndash;&gt;
    <section ref="pag1Ref">
       <Pag1 />
    </section>
@@ -56,9 +57,16 @@
 
    <Tabla />
 </template>
+-->
 
 
-<<script setup>
+<template>
+  <section class="scale-90">
+    <pag5></pag5>
+  </section>
+</template>
+
+<script setup>
 import { ref } from 'vue';
 import html2canvas from 'html2canvas';
 import Pag1 from "~/pages/herramienta/9119A/pag1.vue";
@@ -68,6 +76,7 @@ import Pag4 from "~/pages/herramienta/9119A/pag4.vue";
 import Pag7 from "~/pages/herramienta/9119A/pag7.vue";
 import Tabla from "~/components/herramienta/tabla.vue";
 import { useGeneratePDF } from '~/composables/useGeneratePDF';
+import Pag5 from "~/pages/herramienta/9119A/pag5.vue";
 const pdfMake = useNuxtApp().$pdfMake;
 
 // Referencias a cada sección
@@ -86,12 +95,9 @@ const generateReportPDF = () => {
    pdfMake
 };
 
-definePageMeta({
+/*definePageMeta({
    layout: 'dasboradlyt'
-});
+});*/
 
 </script>
 
-
-<!--width: 1805,-->
-<!--height: 1290-->

@@ -17,12 +17,11 @@ const totalpagina = 12
             <section class="grid gap-6 mb-6 md:grid-cols-2 mx-14 my-1">
                <section class="my-8">
                   <label class="block mb-2 text-sm text-secundary-50 font-bold ">
-                     3. Número de egresados y titulados en el ciclo escolar <span class="text-secundary-100">
-              {{ cicloEscolar }}
-              </span>, por sexo y edad.
-
+                     3. Número de egresados y titulados en el ciclo escolar
+                    <span class="text-secundary-100">
+                    {{ cicloEscolar }}
+                    </span>, por sexo y edad.
                   </label>
-
                </section>
             </section>
             <section class="flex  justify-around mx-14 my-1">

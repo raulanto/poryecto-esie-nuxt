@@ -3,10 +3,7 @@ defineProps({
   name: {
     type: String,
   },
-
 })
-
-
 </script>
 
 <template>
@@ -21,7 +18,3 @@ defineProps({
     </div>
   </div>
 </template>
-
-<style scoped>
-
-</style>
