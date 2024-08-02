@@ -8,9 +8,9 @@ import ReusableDropdown from '@/components/global/DropDown.vue'
 const isSidebarVisible = ref(false)
 
 const dropdownItems1 = [
-  {label: 'Poblacion por rango', href: '/proyect/'},
+  {label: 'Poblacion por rango', href: '/proyect/poblacion'},
   {label: 'Historico', href: '/proyect/historico'},
-  {label: 'prueba', href: '/proyect/poblacion'},
+
 ]
 
 
