@@ -41,8 +41,8 @@
         </button>
       </div>
       <!-- Barra de progreso -->
-      <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 relative p-1">
-        <div :style="{ width: progress + '%' }" class="bg-blue-600 h-2.5 rounded-full"></div>
+      <div class="w-full bg-gray-200 rounded-full h-3.5 dark:bg-gray-700 relative ">
+        <div :style="{ width: progress + '%' }" class="bg-blue-600 h-3.5 rounded-full"></div>
         <span class="absolute inset-0 flex items-center justify-center text-xs text-gray-700 dark:text-gray-300 ">
           {{ Math.round(progress) }}%
         </span>

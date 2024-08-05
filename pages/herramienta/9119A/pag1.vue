@@ -7,7 +7,7 @@ const cicloEscolar = ref("2022-2024")
 </script>
 
 <template>
-  <section class="bg-white min-h-screen max-w-screen-2xl flex flex-col">
+  <section class="bg-white min-h-[6345] min-w-screen-[1136] flex flex-col">
     <header>
       <nav class="w-full  text-white bg-secundary-50 h-28 flex items-center justify-between px-8">
         <div class="">

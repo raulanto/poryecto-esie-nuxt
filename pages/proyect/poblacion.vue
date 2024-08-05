@@ -83,7 +83,7 @@ onMounted(() => {
 
 <template>
    <div class="">
-      <!--  Sector de select  -->
+<!--      &lt;!&ndash;  Sector de select  &ndash;&gt;-->
       <section id="opcion1" class="section-card mb-4">
          <div class="relative w-full pr-4 max-w-full flex-grow flex-1 ">
             <h5 class="text-h5">Sistema de integración escolar</h5>
@@ -106,7 +106,7 @@ onMounted(() => {
          </div>
 
       </section>
-      <!--  sector de targetas  -->
+<!--      &lt;!&ndash;  sector de targetas  &ndash;&gt;-->
       <section id="opcion2">
          <SectionCard
              :text="'Carrera'"
@@ -117,10 +117,10 @@ onMounted(() => {
              :text4=" `Modalidad - ${selectedModalidadName}`"
              :text3="selectedPeriodName"/>
       </section>
-      <!--  Sector tablas de lista  -->
+<!--      &lt;!&ndash;  Sector tablas de lista  &ndash;&gt;-->
       <section id="opcion3" class="rounded-lg">
          <tablalist>
-            <!--Primer opcion-->
+            &lt;!&ndash;Primer opcion&ndash;&gt;
             <div id="styled-profile" aria-labelledby="profile-tab" class="hidden rounded-md" role="tabpanel">
                <SectionGrapOv
                    :cols="cols"
@@ -129,7 +129,7 @@ onMounted(() => {
                    :mujeres="mujeresRango"
                    :rows="cols2"/>
             </div>
-            <!--Segunda opcion -->
+<!--            &lt;!&ndash;Segunda opcion &ndash;&gt;-->
             <div id="styled-dashboard" aria-labelledby="dashboard-tab" class="hidden rounded-md" role="tabpanel">
                <SectionGrap
                    :cols="cols"
@@ -138,7 +138,7 @@ onMounted(() => {
                    :mujeres="mujeres"
                    :rows="romws"/>
             </div>
-            <!--Tercera opcion -->
+<!--            &lt;!&ndash;Tercera opcion &ndash;&gt;-->
             <div id="contacts" aria-labelledby="contacts-tab" class="hidden rounded-md " role="tabpanel">
                <div class="section-card mb-4">
                   <SelectInput
@@ -161,24 +161,10 @@ onMounted(() => {
                    :mujeres="mujeresPlan"
                    :rows="cols2"/>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-4 mb-4">
-               <div
-                   class="section-prueba lg:col-span-2 col-span-1"
-               >
 
-               </div>
-               <div
-                   class="section-prueba lg:col-span-3 col-span-1"
-               >
-                  <TreemapCharts :series="totalSumByCarrera"/>
-               </div>
-
-            </div>
          </tablalist>
-
-
       </section>
-   </div>
+   </div>-
 
 </template>
 

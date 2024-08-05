@@ -11,12 +11,14 @@ const dropdownItems1 = [
   {label: 'Poblacion por rango', href: '/proyect/poblacion'},
   {label: 'Historico', href: '/proyect/historico'},
 
+
 ]
 
 
 
 const dropdownItems2 = [
   {label: 'Generar 911.9A', href: '/herramienta/'},
+   {label: 'Generar 911.9', href: '/herramienta/generar2'},
 ]
 
 
