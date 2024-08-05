@@ -14,6 +14,17 @@
 
 
 <template>
+
+   <section id="opcion1" class="section-card mb-4">
+      <div class="relative w-full pr-4 max-w-full flex-grow flex-1 ">
+         <h5 class="text-h5">Sistema de integración escolar</h5>
+         <h1 ref="animatedText" class="text-h1">Población Escolar</h1>
+         <section class="flex">
+            <SelectInput v-model="selectedCareer" :options="carreras" inputId="career" label="Carrera"/>
+
+         </section>
+      </div>
+   </section>
   <div class="w-full mb-4">
     <div class="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg p-4">
       <div class="flex-row items-center justify-between p-4 space-y-3 sm:flex sm:space-y-0 sm:space-x-4">

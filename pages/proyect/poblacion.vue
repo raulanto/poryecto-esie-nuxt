@@ -12,6 +12,7 @@ import SectionCard from "~/components/dashboard/SectionCard.vue";
 import SectionGrapOv from "~/components/dashboard/SectionGrapOv.vue";
 import SectionGrap from "~/components/dashboard/SectionGrap.vue";
 import SectionGrapTable from "~/components/dashboard/SectionGrapTable.vue";
+import TreemapCharts from "~/components/charts/TreemapCharts.vue";
 
 
 const cols2 = ['Menor a 20', '20-24', '25-29', '30-34', 'Mayor a 34']
@@ -160,8 +161,22 @@ onMounted(() => {
                    :mujeres="mujeresPlan"
                    :rows="cols2"/>
             </div>
+            <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-4 mb-4">
+               <div
+                   class="section-prueba lg:col-span-2 col-span-1"
+               >
 
+               </div>
+               <div
+                   class="section-prueba lg:col-span-3 col-span-1"
+               >
+                  <TreemapCharts :series="totalSumByCarrera"/>
+               </div>
+
+            </div>
          </tablalist>
+
+
       </section>
    </div>
 

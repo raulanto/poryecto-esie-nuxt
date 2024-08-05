@@ -32,14 +32,14 @@ const cicloEscolar = ref("2022-2024")
     </nav>
     <article class="flex-grow ">
 
-      <section class="mx-14 my-2">
+      <section class="mx-14 mt-2 ">
         <div class="flex mb-2 space-x-2 rtl:space-x-reversen items-center">
           <label class="block mb-2 text-sm text-secundary-50 font-bold ">
             Clave de la Institución:
           </label>
           <div class="flex">
             <input
-                class="block w-11 h-11  font-extrabold  text-xl  text-center   border border-secundary-50 roun rounded-l-lg"
+                class=" w-11 h-11  font-extrabold  text-sm  text-center   "
                 maxlength="1"  type="text"/>
             <input
                 class="block w-11 h-11  font-extrabold  text-xl    text-center   border border-secundary-50 "
@@ -78,7 +78,7 @@ const cicloEscolar = ref("2022-2024")
                  type="text">
         </div>
       </section>
-      <section class="mx-14 my-2">
+      <section class="mx-14 ">
         <div class="flex mb-1 space-x-2 rtl:space-x-reversen items-center">
           <label class="block mb-1 text-sm text-secundary-50 font-bold ">
             Clave de la Escuela:
@@ -124,7 +124,7 @@ const cicloEscolar = ref("2022-2024")
                  type="text">
         </div>
       </section>
-      <section class="mx-14 my-2">
+      <section class="mx-14 ">
         <div class="flex mb-1 space-x-2 rtl:space-x-reversen items-center">
           <label class="block mb-1 text-sm text-secundary-50 font-bold ">
             Clave de la Carrera </label>
@@ -168,7 +168,7 @@ const cicloEscolar = ref("2022-2024")
                  type="text">
         </div>
       </section>
-      <section class="grid gap-6 mb-6 md:grid-cols-2 mx-14 my-2">
+      <section class="grid gap-6 mb-6 md:grid-cols-2 mx-14 ">
         <section class="my-8">
           <label class="block mb-2 text-sm text-secundary-50 font-bold ">
             Modalidad de la Carrera (Marque con una x)
