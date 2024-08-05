@@ -1,4 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @tailwind base;
+@layer base {
+    @font-face {
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+    }
+}
+
 @tailwind components;
 @layer components {
     .btn-default {
@@ -46,7 +55,12 @@
     }
 
     .section-card {
-        @apply flex bg-white h-full w-full h-full  flex-col md:flex-row rounded-lg border-gray-100 shadow-md shadow-black/5 dark:border-gray-600 p-4 space-y-4 md:space-y-0 md:space-x-4;
+        @apply flex bg-white h-full w-full   flex-col md:flex-row rounded-lg border-gray-100 shadow-md shadow-black/5 dark:border-gray-600 p-4 space-y-4 md:space-y-0 md:space-x-4;
+    }
+
+    .section-prueba {
+        @apply flex border-2 h-full w-full border-dashed border-gray-300 rounded-lg dark:border-gray-600 mb-4  ;
     }
 }
+
 @tailwind utilities;
